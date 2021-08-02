@@ -1,48 +1,49 @@
 <template>
-  <div>
-    <div class="top-right links">
-      <template v-if="authenticated">
-        <router-link :to="{ name: 'home' }">
-          {{ $t('home') }}
-        </router-link>
-      </template>
-      <template v-else>
-        <router-link :to="{ name: 'about' }">
-          {{ $t('about') }}
-        </router-link>
-        <router-link :to="{ name: 'login' }">
-          {{ $t('login') }}
-        </router-link>
-        <router-link :to="{ name: 'register' }">
-          {{ $t('register') }}
-        </router-link>
-      </template>
-    </div>
-
-    <div class="text-center">
-      <div class="title mb-4">
-        {{ title }}
-      </div>
-
-      <div class="links">
-        <a href="https://github.com/cretueusebiu/laravel-vue-spa">github.com/cretueusebiu/laravel-vue-spa</a>
-      </div>
-    </div>
-  </div>
+  <v-container>
+    <v-row>
+      <v-col cols="12" class="bg-white text-center">
+        <p>samme</p>
+      </v-col>
+      <v-col cols="12">
+        <carousel class="" :nav="false" :items="1" :margin="10" :loop="true"  :autoplay="true" :autoplaySpeed="1500">
+          <img :src="`${baseUrl}${item.path}`" v-for="item in bannerImageList" :key="item.id" alt="carousel" class="welcome-banner-carousel-img"  />
+        </carousel>
+      </v-col>
+    </v-row>
+  </v-container>  
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
+import carousel from 'v-owl-carousel';
 
 export default {
   layout: 'basic',
+
+  components:{
+    carousel,
+  },
 
   metaInfo () {
     return { title: this.$t('home') }
   },
 
   data: () => ({
-    title: window.config.appName
+    title: window.config.appName,
+    bannerImageList: [
+      {
+        path: '/asset/img/some.jpeg',
+        id: 1,
+      },
+      {
+        path: '/asset/img/some.jpeg',
+        id: 2,
+      },
+      {
+        path: '/asset/img/some.jpeg',
+        id: 3,
+      },
+    ]
   }),
 
   computed: mapGetters({

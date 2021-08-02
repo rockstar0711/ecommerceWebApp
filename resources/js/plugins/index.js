@@ -1,4 +1,5 @@
 import './axios'
 import './fontawesome'
 import './v-tooltip'
+import './mobiledetect'
 import 'bootstrap'

@@ -1,12 +1,20 @@
 <template>
-  <div class="basic-layout d-flex align-items-center justify-content-center m-0 bg-white">
-    <child />
-  </div>
+  <v-app>
+    <v-main>
+      <child />
+    </v-main>
+    <MoBottomNav v-if="$isMobile()" />
+  </v-app>
 </template>
 
 <script>
+import MoBottomNav from '~/components/MoBottomNav'
 export default {
-  name: 'BasicLayout'
+  name: 'BasicLayout',
+
+  components: {
+    MoBottomNav
+  }
 }
 </script>
 

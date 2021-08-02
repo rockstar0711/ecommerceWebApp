@@ -1,21 +1,22 @@
 <template>
-  <div class="main-layout">
-    <navbar />
-
-    <div class="container mt-4">
+  <v-app>
+    <v-main>
       <child />
-    </div>
-  </div>
+    </v-main>
+    <MoBottomNav v-if="$isMobile()" />
+  </v-app>
 </template>
 
 <script>
 import Navbar from '~/components/Navbar'
+import MoBottomNav from '~/components/MoBottomNav'
 
 export default {
   name: 'MainLayout',
 
   components: {
-    Navbar
+    Navbar,
+    MoBottomNav
   }
 }
 </script>
