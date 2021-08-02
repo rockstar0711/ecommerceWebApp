@@ -4,6 +4,11 @@ const mix = require('laravel-mix')
 require('laravel-mix-versionhash')
 // const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 
+
+mix.styles([
+  'public/asset/css/main.css',
+], 'public/dist/css/all.css');
+
 mix
   .js('resources/js/app.js', 'public/dist/js')
   .sass('resources/sass/app.scss', 'public/dist/css')

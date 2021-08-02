@@ -15,6 +15,15 @@ $config = [
   <title>{{ config('app.name') }}</title>
 
   <link rel="stylesheet" href="{{ mix('dist/css/app.css') }}">
+  <link rel="stylesheet" href="{{ mix('dist/css/all.css') }}">
+  <script>
+    (function(){
+      window.Laravel = {
+        csrfToken:'{{ csrf_token() }}',
+        base_url:"{{URL::to('/')}}"
+      }
+    })();
+  </script>
 </head>
 <body>
   <div id="app"></div>
