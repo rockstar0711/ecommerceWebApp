@@ -2,7 +2,7 @@
   <v-container class="bg-gray">
     <v-row class="bg-white">
       <v-col cols="12" class="bg-white text-center">
-        <p class="mb-0 font-weight-bold">業著MeetBest</p>
+        <p class="mb-0 font-weight-bold">合北MeetBest</p>
       </v-col>
       <v-col cols="12" class="pa-0">
         <carousel class="" :nav="false" :items="1" :margin="0" :loop="true"  :autoplay="true" :autoplaySpeed="1500">
@@ -18,7 +18,7 @@
         合北
       </v-btn>
       <v-btn class="" outlined color="#009688" >
-        積轉
+        合此
       </v-btn>
       <v-btn class="" outlined color="#009688" >
         此健
@@ -28,7 +28,7 @@
       <v-row class="" v-for="(item, index) in dataList" :key="index" >
         <v-col cols="12" class="position-relative">
           <carousel class="" :nav="false" :items="1" :margin="0" :loop="true"  :autoplay="false" :autoplaySpeed="1500">
-            <v-img :height="$isMobile() ? '250' : '500'" :src="`${baseUrl}${item.path}`" v-for="item in item.imgArr" :key="item.id" alt="carousel" class="welcome-banner-carousel-img"  />
+            <v-img :height="$isMobile() ? '250' : '500'" :src="`${baseUrl}${item.path}`" v-for="item in item.imgArr" :key="item.id" alt="carousel" class="welcome-banner-carousel-img rounded-lg"  />
           </carousel>
           <div v-if="item.isSelled == true" class="position-absolute room-img-mark elevation-3">
             <p class="mb-0 room-img-mark-font">每不整外</p> 
@@ -97,7 +97,7 @@ export default {
     dataList: [
       {
         id: 1,
-        title: "能有早課際以每",
+        title: "能有早際以每",
         category: '小復不',
         viewCnt: 203,
         location: '十在子',
@@ -134,9 +134,9 @@ export default {
       {
         id: 2,
         title: "作程痛",
-        category: '學十排事',
+        category: '十排事',
         viewCnt: 34,
-        location: '子個',
+        location: '子子',
         minPrice: 455,
         maxPrice: 566,
         isSelled: false,
@@ -169,10 +169,10 @@ export default {
       },
       {
         id: 3,
-        title: "臺華於參一",
+        title: "於參一於參",
         category: '小方知手',
         viewCnt: 203,
-        location: '覺只',
+        location: '只只',
         minPrice: 2000,
         maxPrice: null,
         isSelled: true,
@@ -205,8 +205,8 @@ export default {
       },
       {
         id: 4,
-        title: "到地學十排事小",
-        category: '是價',
+        title: "到地十排事小",
+        category: '是',
         viewCnt: 203,
         location: '作去英',
         minPrice: 500,
@@ -243,9 +243,9 @@ export default {
       {
         id: 5,
         title: "而建行業著企",
-        category: '出過',
+        category: '出出',
         viewCnt: 203,
-        location: '屋運',
+        location: '屋出',
         minPrice: 700,
         maxPrice: 800,
         isSelled: true,
@@ -279,8 +279,8 @@ export default {
       },
       {
         id: 6,
-        title: "平眼新的看女這",
-        category: '權屋運師',
+        title: "平眼新的看女",
+        category: '權屋',
         viewCnt: 203,
         location: '像著目',
         minPrice: 1000,
