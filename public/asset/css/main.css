@@ -35,20 +35,18 @@ html {
     right: 40px;
     bottom: 40px;
     z-index: 1;
-    background: #009688;
-    width: 70px;
-    height: 70px;
+    background: #B29A6E;
     align-items: center;
     justify-content: center;
     text-align: center;
-    display: flex;
-    border-radius: 7px;
+    border-radius: 13px;
 }
     
 .room-img-mark-font{
     font-weight: bold;
-    font-size: 25px;
+    font-size: 20px;
     color: #fff;
+    line-height: 26px;
 }
 
 .mo-bottom-nav-con{
@@ -60,4 +58,80 @@ html {
 
 .bg-white-translate{
     background: rgba(255, 255, 255, 0.7);
+}
+
+.put-align-center{
+    
+}
+
+.top-tab-container{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    border-radius: 20px;
+    border: 1px solid #f3f3f3;
+    display: flex;
+    padding: 3px 10px;
+}
+
+.top-tab-element-right{
+    border-right: 1px solid #f3f3f3;
+}
+
+.cus-menu-btn, .cus-menu-icon-btn{
+    height: 30px!important;
+}
+
+.cus-menu-icon-btn{
+    min-width: 50px!important;
+}
+
+.cus-menu-btn .v-btn__content{
+    color: #000!important;
+    font-size: 15px;
+}
+
+.menu-bar-shadow{
+    box-shadow: 1px 1px 21px 6px #e3e3e3;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+    width: 7px!important;
+    height: 7px!important;
+    margin: 3px 4px!important;
+    background: rgba(0,0,0,0.3)!important;
+}
+
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    background: #000!important;
+}
+
+.cus-chip-border-radius.v-chip{
+    border-radius: 6px!important;
+}
+
+.brown-bar{
+    height: 1px;
+    width: 60px;
+    background-color: #B29A6E;
+    transform:rotate(-60deg);
+}
+
+.font-color-brown{
+    color: #B29A6E;
+}
+
+.font-size-13{
+    font-size: 13px;
+}
+
+.unit-top{
+    top: -22px;
+    left: 12px
+}
+
+.unit-bottom{
+    bottom: -25px;
+    right: 14px;
 }

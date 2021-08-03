@@ -1,58 +1,73 @@
 <template>
-  <v-container class="bg-gray">
+  <v-container class="bg-white">
     <v-row class="bg-white">
-      <v-col cols="12" class="bg-white text-center">
-        <p class="mb-0 font-weight-bold">合北MeetBest</p>
+      <v-col cols="12" class="bg-white text-center position-relative">
+        <p class="mb-0 font-weight-bold">合北 Meetbest</p>
+        <div class="top-tab-container">
+          <div class="top-tab-element-right pr-2">
+            <v-icon color="#000000">mdi-dots-horizontal</v-icon>
+          </div>
+          <div class="pl-2">
+            <v-icon color="#000000">mdi-record-circle-outline</v-icon>
+          </div>
+        </div>
       </v-col>
       <v-col cols="12" class="pa-0">
-        <carousel class="" :nav="false" :items="1" :margin="0" :loop="true"  :autoplay="true" :autoplaySpeed="1500">
-          <v-img :height="$isMobile() ? '150' : '500'" :src="`${baseUrl}${item.path}`" v-for="item in bannerImageList" :key="item.id" alt="carousel" class="welcome-banner-carousel-img"  />
+        <carousel class="" :nav="false" :items="1" :margin="0" :loop="false"  :autoplay="true" :autoplaySpeed="1500">
+          <v-img :height="$isMobile() ? '200' : '500'" :src="`${baseUrl}${item.path}`" v-for="item in bannerImageList" :key="item.id" alt="carousel" class="welcome-banner-carousel-img"  />
         </carousel>
       </v-col>
     </v-row>
-    <v-row class="py-5 align-center justify-space-around elevation-5 bg-white">
-      <v-btn class="" color="teal" dark >
-        <v-icon>mdi-format-list-bulleted-square</v-icon>
+    <v-row class="py-5 align-center justify-space-around menu-bar-shadow bg-white">
+      <v-btn class="cus-menu-icon-btn px-0" color="#B29A6E" dark >
+        <v-icon>mdi-tune-variant</v-icon>
       </v-btn>
-      <v-btn class="" outlined color="#009688" >
+      <v-btn class="cus-menu-btn px-6" outlined color="#CCCCCC" >
         合北
       </v-btn>
-      <v-btn class="" outlined color="#009688" >
+      <v-btn class="cus-menu-btn px-6" outlined color="#CCCCCC" >
         合此
       </v-btn>
-      <v-btn class="" outlined color="#009688" >
+      <v-btn class="cus-menu-btn px-6" outlined color="#CCCCCC" >
         此健
       </v-btn>
     </v-row>
-    <v-container class="ma-0 pa-0 mt-8 bg-gray " style="margin-bottom: 150px!important;">
-      <v-row class="" v-for="(item, index) in dataList" :key="index" >
+    <v-container class="ma-0 pa-0 mt-5" style="margin-bottom: 150px!important;">
+      <v-row class="mt-8" v-for="(item, index) in dataList" :key="index" >
         <v-col cols="12" class="position-relative">
           <carousel class="" :nav="false" :items="1" :margin="0" :loop="true"  :autoplay="false" :autoplaySpeed="1500">
             <v-img :height="$isMobile() ? '250' : '500'" :src="`${baseUrl}${item.path}`" v-for="item in item.imgArr" :key="item.id" alt="carousel" class="welcome-banner-carousel-img rounded-lg"  />
           </carousel>
-          <div v-if="item.isSelled == true" class="position-absolute room-img-mark elevation-3">
-            <p class="mb-0 room-img-mark-font">每不整外</p> 
+          <div v-if="item.isSelled == true" class="position-absolute room-img-mark elevation-5 pa-3">
+            <div>
+              <div class="d-flex justify-center">
+                <p class="mb-0 room-img-mark-font pr-2">每</p> 
+                <p class="mb-0 room-img-mark-font">不</p> 
+              </div>
+              <div class="d-flex justify-center">
+                <p class="mb-0 room-img-mark-font pr-2">安</p> 
+                <p class="mb-0 room-img-mark-font">外</p> 
+              </div>
+            </div>
           </div>
         </v-col>
-        <v-col cols="12">
+        <v-col cols="12" class="pt-0">
           <v-row class="align-start">
             <v-col cols="8">
               <div>
-                <p class="mb-0" style="font-size: 22px; color:#009688">{{item.category}} - {{item.title}}</p>
+                <p class="mb-0" style="font-size: 20px; color:#B29A6E">{{item.category}} - {{item.title}}</p>
               </div>
               <div>
-                <v-chip outlined  color="#009688">{{item.location}}</v-chip>
-                <v-chip outlined  color="#009688">最多{{item.viewCnt}}人</v-chip>
+                <v-chip outlined small color="#B29A6E" class="cus-chip-border-radius">{{item.location}}</v-chip>
+                <v-chip outlined small color="#B29A6E" class="cus-chip-border-radius">最多{{item.viewCnt}}人</v-chip>
               </div>
             </v-col>  
             <v-col cols="4" class="d-flex align-center justify-end">
               <div class="text-right">
-                <p class="mb-0" style="font-size: 30px; font-weight: bold">{{item.minPrice}}</p>
-                <p v-if="item.maxPrice !== null" class="mb-0" style="font-size: 24px; font-weight: bold"> ~ {{item.maxPrice}}</p>
+                <p class="mb-0" style="font-size: 30px; font-weight: bold; color: #B29A6E;">{{item.minPrice}}</p>
+                <p v-if="item.maxPrice !== null" class="mb-0" style="font-size: 19px; font-weight: bold; color: #B29A6E;"> ~ {{item.maxPrice}}</p>
               </div>
-              <div class="pl-2">
-                <p class="mb-0" style="font-size: 15px; font-weight: bold">元 / 时</p>
-              </div>
+              <Unit />
             </v-col>
           </v-row>
         </v-col>
@@ -64,12 +79,14 @@
 <script>
 import { mapGetters } from 'vuex'
 import carousel from 'v-owl-carousel';
+import Unit from '~/components/Unit'
 
 export default {
   layout: 'basic',
 
   components:{
     carousel,
+    Unit
   },
 
   metaInfo () {
