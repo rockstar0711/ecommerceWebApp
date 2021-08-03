@@ -35,7 +35,7 @@
     <v-container class="ma-0 pa-0 mt-5" style="margin-bottom: 150px!important;">
       <v-row class="mt-8" v-for="(item, index) in dataList" :key="index" >
         <v-col cols="12" class="position-relative">
-          <carousel class="" :nav="false" :items="1" :margin="0" :loop="true"  :autoplay="false" :autoplaySpeed="1500">
+          <carousel class="" :nav="false" :items="1" :margin="0" :loop="false"  :autoplay="false" :autoplaySpeed="1500">
             <v-img :height="$isMobile() ? '250' : '500'" :src="`${baseUrl}${item.path}`" v-for="item in item.imgArr" :key="item.id" alt="carousel" class="welcome-banner-carousel-img rounded-lg"  />
           </carousel>
           <div v-if="item.isSelled == true" class="position-absolute room-img-mark elevation-5 pa-3">
