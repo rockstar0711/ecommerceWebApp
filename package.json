@@ -27,6 +27,7 @@
     "v-tooltip": "^2.0.2",
     "vform": "^1.0.0",
     "vue": "^2.6.10",
+    "vue-carousel-3d": "^1.0.1",
     "vue-i18n": "^8.11.2",
     "vue-meta": "^1.6.0",
     "vue-mobile-detection": "^1.0.0",

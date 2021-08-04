@@ -135,3 +135,18 @@ html {
     bottom: -25px;
     right: 14px;
 }
+
+.bg-white-carusel-dot .owl-carousel .owl-dots{
+    background: white!important;
+    bottom: -10px!important;
+    padding: 0px 20px!important;
+    border-radius: 15px!important;
+}
+
+.dark-bg-background{
+    background: #E5E5E5;
+}
+
+.border-bottom-dark-gray{
+    border-bottom: 1px solid #CDCDCD;
+}

@@ -26,7 +26,7 @@
             <div style="height: 56px"></div>
         </div>
         <v-bottom-navigation
-            :value="value"
+            :v-model="value"
             :input-value="active"
             color="#B29A6E"
             grow
@@ -79,7 +79,18 @@ export default {
     watch:{
         currentPath:{
             handler(val){
-                
+                if(val.name == 'introduce'){
+                    this.value = 0;
+                }
+                else if(val.name == 'welcome'){
+                    this.value = 1;
+                }
+                else if(val.name == 'search'){
+                    this.value = 2;
+                }
+                else if(val.name == 'gallery'){
+                    this.value = 3;
+                }
             },
             deep: true
         }
@@ -98,6 +109,26 @@ export default {
     methods:{
         onNav(val){
             this.value = val;
+            switch (val) {
+                case 0:
+                    this.$router.push({name:"introduce"})
+                    break;
+            
+                case 1:
+                    this.$router.push({name:"welcome"})
+                    break;
+            
+                case 2:
+                    this.$router.push({name:"search"})
+                    break;
+            
+                case 3:
+                    this.$router.push({name:"gallery"})
+                    break;
+            
+                default:
+                    break;
+            }
         }
     }
 }

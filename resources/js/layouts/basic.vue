@@ -1,5 +1,6 @@
 <template>
   <v-app>
+    <Header />
     <v-main>
       <child />
     </v-main>
@@ -9,11 +10,13 @@
 
 <script>
 import MoBottomNav from '~/components/MoBottomNav'
+import Header from '~/components/Header'
 export default {
   name: 'BasicLayout',
 
   components: {
-    MoBottomNav
+    MoBottomNav,
+    Header
   }
 }
 </script>

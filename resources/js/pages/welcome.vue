@@ -1,17 +1,6 @@
 <template>
   <v-container class="bg-white">
     <v-row class="bg-white">
-      <v-col cols="12" class="bg-white text-center position-relative">
-        <p class="mb-0 font-weight-bold">合北 Meetbest</p>
-        <div class="top-tab-container">
-          <div class="top-tab-element-right pr-2">
-            <v-icon color="#000000">mdi-dots-horizontal</v-icon>
-          </div>
-          <div class="pl-2">
-            <v-icon color="#000000">mdi-record-circle-outline</v-icon>
-          </div>
-        </div>
-      </v-col>
       <v-col cols="12" class="pa-0">
         <carousel class="" :nav="false" :items="1" :margin="0" :loop="false"  :autoplay="true" :autoplaySpeed="1500">
           <v-img :height="$isMobile() ? '200' : '500'" :src="`${baseUrl}${item.path}`" v-for="item in bannerImageList" :key="item.id" alt="carousel" class="welcome-banner-carousel-img"  />
