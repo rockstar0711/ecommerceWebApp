@@ -87,7 +87,7 @@ export default {
     baseUrl: window.Laravel.base_url,
     bannerImageList: [
       {
-        path: '/asset/img/welcome/room1.jpeg',
+        path: '/asset/img/welcome/room0.jpeg',
         id: 1,
       },
       {

@@ -32,7 +32,12 @@ export default {
     watch:{
         currentPath:{
             handler(val){
-                if(val.name == 'list' || val.name == 'detail' || val.name == 'about'){
+                if(
+                    val.name == 'list' || 
+                    val.name == 'detail' || 
+                    val.name == 'about' ||
+                    val.path.includes('faq')
+                ){
                     this.isShowGoBackBtn = true;
                 }
                 else {
@@ -44,7 +49,12 @@ export default {
     },
 
     created(){
-        if(this.currentPath.name == 'list' || this.currentPath.name == 'detail' || this.currentPath.name == 'about'){
+        if(
+            this.currentPath.name == 'list' ||
+            this.currentPath.name == 'detail' ||
+            this.currentPath.name == 'about' ||
+            this.currentPath.path.includes('faq')
+        ){
             this.isShowGoBackBtn = true;
         }
         else {

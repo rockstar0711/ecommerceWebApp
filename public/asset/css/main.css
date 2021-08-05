@@ -341,3 +341,71 @@ a#readless{
 .bg-light-brown{
     background: #D1C2AB;
 }
+
+.faq-first-container{
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/welcome/faq-first-bg.png');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    margin-bottom: 120px;
+}
+
+.faq-nav-container{
+    width: calc(100vw - 24px);
+    height: 60px;
+    border-radius: 30px;
+    padding: 10px 10px;
+    margin: auto;
+    position: fixed;
+    bottom: 40px;
+    background: white;
+    box-shadow: 0px 0px 6px 1px #999999;
+}
+
+.faq-nav-left{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5px;
+    padding: 15px 15px;
+}
+
+.faq-nav-right{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5px;
+    padding: 15px 15px;
+}
+
+.faq-nav-center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+}
+
+.faq-three-card{
+    background: #000;
+    color: #B29A6E;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 25px;
+}
+
+.faq-three-card-image{
+    border-top-right-radius: 20px!important;
+    border-bottom-left-radius: 20px!important;
+}
+
+.faq-three-card-title{
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.faq-three-card-tag{
+    font-size: 12px;
+}

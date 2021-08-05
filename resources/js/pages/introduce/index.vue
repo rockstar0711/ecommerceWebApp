@@ -139,11 +139,12 @@ export default {
 
         navToRefer(id){
             console.log(id)
-            if(id < 2){
+            if(id > 2){
                 return
             }
             else{
                 if(id == 1){
+                    console.log("go faq!")
                     this.$router.push({name: 'faq.first'});
                 }
                 else if(id == 2){

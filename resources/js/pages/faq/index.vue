@@ -5,7 +5,21 @@
 </template>
 
 <script>
+export default {
+    layout: 'basic',
 
+    components:{
+        
+    },
+
+    metaInfo () {
+        return { title: "Faq" }
+    },  
+
+    data: () => ({
+
+    }),
+}
 </script>
 
 <style>
