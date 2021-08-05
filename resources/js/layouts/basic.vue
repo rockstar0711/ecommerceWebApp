@@ -28,7 +28,7 @@ export default {
     watch:{
         currentPath:{
             handler(val){
-                if(val.name == 'list' || val.name == 'detail'){
+                if(val.name == 'list' || val.name == 'detail' || val.name == 'about'){
                     this.isShownFooter = false
                 }
                 else {
@@ -40,7 +40,7 @@ export default {
     },
 
     created(){
-        if(this.currentPath.name == 'list' || this.currentPath.name == 'detail'){
+        if(this.currentPath.name == 'list' || this.currentPath.name == 'detail' || this.currentPath.name == 'about'){
             this.isShownFooter = false
         }
         else {

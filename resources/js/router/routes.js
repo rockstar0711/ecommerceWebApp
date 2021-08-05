@@ -9,7 +9,14 @@ export default [
   { path: '/gallery', name: 'gallery', component: page('gallery/index.vue') },
   { path: '/list', name: 'list', component: page('list/index.vue') },
   { path: '/detail', name: 'detail', component: page('detail/index.vue') },
-  { path: '/about', name: 'about', component: page('about.vue') },
+  { path: '/about', name: 'about', component: page('about/index.vue') },
+  { path: '/faq', component: page('faq/index.vue'),
+    children: [
+      { path: '', redirect: { name: 'faq.first' } },
+      { path: 'first', name: 'faq.first', component: page('faq/first.vue') },
+      { path: 'second', name: 'faq.second', component: page('faq/second.vue') },
+      { path: 'third', name: 'faq.third', component: page('faq/third.vue') }
+    ] },
 
   { path: '/login', name: 'login', component: page('auth/login.vue') },
   { path: '/register', name: 'register', component: page('auth/register.vue') },

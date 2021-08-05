@@ -18,15 +18,15 @@
             <v-col cols="12" class="pb-0">
                 <p class="mb-0 drowdown-title-font">合北就但</p>
             </v-col>
-            <v-col cols="6" class="pt-0">
+            <v-col cols="6" class="pt-0" @click="toggleScopePicker">
                 <div class="dropdown-btn">
-                    <p class="mb-0 dropdown-font">影不行於男了</p>
+                    <p class="mb-0 dropdown-font">{{scope == null ? '影不行於男了' : scope}}</p>
                     <v-icon color="#B29A6E">mdi-menu-down</v-icon>
                 </div>
             </v-col>
-            <v-col cols="6" class="pt-0">
+            <v-col cols="6" class="pt-0" @click="toggleTagPicker">
                 <div class="dropdown-btn">
-                    <p class="mb-0 dropdown-font">影不行於男了</p>
+                    <p class="mb-0 dropdown-font">{{tag == null ? '影不行於男了' : tag}}</p>
                     <v-icon color="#B29A6E">mdi-menu-down</v-icon>
                 </div>
             </v-col>
@@ -61,10 +61,23 @@
                 </div>
             </v-col>
         </v-row>
+        <ScopePicker 
+            :scopePicker="scopePicker"
+            @onCancelScopePicker="onCancelScopePicker"
+            @onOkScopePicker="onOkScopePicker"
+        />
+        <TagPicker 
+            :tagPicker="tagPicker"
+            @onCancelTagPicker="onCancelTagPicker"
+            @onOkTagPicker="onOkTagPicker"
+        />
     </v-container>
 </template>
 
 <script>
+import ScopePicker from '~/components/ScopePicker'
+import TagPicker from '~/components/TagPicker'
+
 export default {
     layout: 'basic',
 
@@ -72,8 +85,17 @@ export default {
         return { title: "Search" }
     },
 
+    components: {
+        ScopePicker,
+        TagPicker
+    },
+
     data: () => ({
         baseUrl: window.Laravel.base_url,
+        scopePicker: false,
+        tagPicker: false,
+        scope: null,
+        tag: null,
         horizontalList: [
             
             {
@@ -108,6 +130,32 @@ export default {
     methods: {
         navToList(){
             this.$router.push({name: 'list'});
+        },
+
+        toggleScopePicker(){
+            this.scopePicker = !this.scopePicker;
+        },
+
+        toggleTagPicker(){
+            this.tagPicker = !this.tagPicker;
+        },
+
+        onCancelScopePicker(){
+            this.scopePicker = false;
+        },
+
+        onOkScopePicker(scope){
+            this.scope = scope;
+            this.onCancelScopePicker();
+        },
+
+        onCancelTagPicker(){
+            this.scopePicker = false;
+        },
+
+        onOkTagPicker(tag){
+            this.tag = tag
+            this.onCancelTagPicker();
         }
     }
 }

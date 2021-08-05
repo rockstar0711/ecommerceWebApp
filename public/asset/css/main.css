@@ -319,3 +319,25 @@ a#readless{
     color: rgb(51, 51, 51);
     font-weight: bold;
 }
+
+.about-tab-container{
+    position: sticky;
+    top: 48px;
+    background: white;
+    z-index: 3;
+}
+
+.about-tab{
+    font-size: 25px;
+    border-bottom: 5px solid #E6E6E6;
+}
+
+.about-tab-active{
+    font-size: 25px;
+    font-weight: bold;
+    border-bottom: 5px solid #B29A6E;
+}
+
+.bg-light-brown{
+    background: #D1C2AB;
+}
