@@ -1,10 +1,10 @@
 <template>
   <v-app>
-    <Header />
+    <Header v-if="isShownHeader"/>
     <v-main>
       <child />
     </v-main>
-    <MoBottomNav v-if="$isMobile()" />
+    <MoBottomNav v-if="$isMobile()&&isShownFooter" />
   </v-app>
 </template>
 
@@ -17,7 +17,41 @@ export default {
   components: {
     MoBottomNav,
     Header
-  }
+  },
+
+   computed:{
+        currentPath(){
+            return this.$route
+        },
+    },
+
+    watch:{
+        currentPath:{
+            handler(val){
+                if(val.name == 'list' || val.name == 'detail'){
+                    this.isShownFooter = false
+                }
+                else {
+                    this.isShownFooter = true
+                }
+            },
+            deep: true
+        }
+    },
+
+    created(){
+        if(this.currentPath.name == 'list' || this.currentPath.name == 'detail'){
+            this.isShownFooter = false
+        }
+        else {
+            this.isShownFooter = true
+        }
+    },
+
+    data: () => ({
+        isShownHeader: true,
+        isShownFooter: true,
+    }),
 }
 </script>
 
