@@ -9,80 +9,81 @@
         </v-row>
         <v-row class="mt-8">
             <v-col cols="8">
-                <p class="mb-0 font-weight-bold" style="font-size: 30px; ">如已學能, 有早課際以</p>
+                <p class="mb-0 font-weight-bold" style="font-size: 30px; ">Full Stack Engineer</p>
             </v-col>
             <v-col cols="4" class="d-flex align-start px-0">
                 <div class="detail-title-badge">
                     <div>
-                        <p class="mb-0 pr-2" style="font-size: 30px">1500</p>
+                        <p class="mb-0 pr-2" style="font-size: 30px">20</p>
                     </div>
                     <div class="text-center">
-                        <p class="mb-0" style="font-size: 12px">~1500</p>
-                        <p class="mb-0" style="font-size: 12px">元/时</p>
+                        <p class="mb-0" style="font-size: 12px">~25</p>
+                        <p class="mb-0" style="font-size: 12px">usd / hour</p>
                     </div>
                 </div>
             </v-col>
             <v-col cols="12">
-                <p class="mb-0" style="font-size: 18px">影不行於男了</p>
+                <p class="mb-0" style="font-size: 18px">ShenYang</p>
             </v-col>
             <v-col cols="12" class="pt-0 d-flex justify-space-between">
                 <div class="d-flex align-center">
-                    <v-chip outlined small color="#B7B7B7" class="cus-detail-top-chip mr-2">男了</v-chip>
-                    <v-chip outlined small color="#B7B7B7" class="cus-detail-top-chip mr-2">男了</v-chip>
-                    <v-chip outlined small color="#B7B7B7" class="cus-detail-top-chip mr-2">男了</v-chip>
-                    <v-chip outlined small color="#B7B7B7" class="cus-detail-top-chip mr-2">男了</v-chip>
+                    <v-chip outlined small color="#B7B7B7" class="cus-detail-top-chip mr-2">remote</v-chip>
+                    <v-chip outlined small color="#B7B7B7" class="cus-detail-top-chip mr-2">senior level</v-chip>
+                    <v-chip outlined small color="#B7B7B7" class="cus-detail-top-chip mr-2">long term</v-chip>
                 </div>
-                <v-chip outlined small color="#B7B7B7" class="cus-detail-top-chip">最多120人</v-chip>
+                <v-chip outlined small color="#B7B7B7" class="cus-detail-top-chip">
+                    <v-icon> mdi-account </v-icon> 25
+                </v-chip>
             </v-col>
         </v-row>
         <v-row>
             <v-col cols="12">
-                <p class="mb-0 drowdown-title-font">合北就但</p>
+                <p class="mb-0 drowdown-title-font">BENIFITES</p>
             </v-col>
             <v-col cols="3" class="d-flex align-center justify-center">
                 <div class="text-center">
                     <v-icon size="25">mdi-abacus</v-icon>
-                    <p class="mb-0" style="font-size: 12px; color: #B7B7B7;">成名是喜</p>
+                    <p class="mb-0" style="font-size: 12px; color: #B7B7B7;">Fitness</p>
                 </div>
             </v-col>
             <v-col cols="3" class="d-flex align-center justify-center">
                 <div class="text-center">
                     <v-icon size="25">mdi-airballoon-outline</v-icon>
-                    <p class="mb-0" style="font-size: 12px; color: #B7B7B7;">成名是喜</p>
+                    <p class="mb-0" style="font-size: 12px; color: #B7B7B7;">Scenery</p>
                 </div>
             </v-col>
             <v-col cols="3" class="d-flex align-center justify-center">
                 <div class="text-center">
                     <v-icon size="25">mdi-airplane-landing</v-icon>
-                    <p class="mb-0" style="font-size: 12px; color: #B7B7B7;">成名是喜</p>
+                    <p class="mb-0" style="font-size: 12px; color: #B7B7B7;">Travel</p>
                 </div>
             </v-col>
             <v-col cols="3" class="d-flex align-center justify-center">
                 <div class="text-center">
                     <v-icon size="25">mdi-blender</v-icon>
-                    <p class="mb-0" style="font-size: 12px; color: #B7B7B7;">成名是喜</p>
+                    <p class="mb-0" style="font-size: 12px; color: #B7B7B7;">Coffe</p>
                 </div>
             </v-col>
             <v-col cols="3" class="d-flex align-center justify-center">
                 <div class="text-center">
                     <v-icon size="25">mdi-camera-iris</v-icon>
-                    <p class="mb-0" style="font-size: 12px; color: #B7B7B7;">成名是喜</p>
+                    <p class="mb-0" style="font-size: 12px; color: #B7B7B7;">Photo</p>
                 </div>
             </v-col>
             <v-col cols="3" class="d-flex align-center justify-center">
                 <div class="text-center">
                     <v-icon size="25">mdi-clover</v-icon>
-                    <p class="mb-0" style="font-size: 12px; color: #B7B7B7;">成名是喜</p>
+                    <p class="mb-0" style="font-size: 12px; color: #B7B7B7;">Lucky</p>
                 </div>
             </v-col>
         </v-row>
         <v-row>
             <v-col cols="12">
-                <p class="mb-0 drowdown-title-font">合北就但</p>
+                <p class="mb-0 drowdown-title-font">DESCRIPTION</p>
             </v-col>
             <v-col cols="12">
                 <p class="mb-0" style="font-size: 15px; color: #999999;">
-                    風企清他就個的管之不神細去服有積轉出全多在動漸空小復不共人在型失時趣斷、程以己平眼新的看女這康北合，大起配孩用……帶親動孩遠安學這個家特小青數遊火是三前意改影不行於男了，如我可我技：山時都底要。走當切，縣冷我決：如已學能有早課際以每不整外作樹層過有說天世方同出過作程痛，南一別藝百品列，古出這命情完過說格說，產會保道際門感！己加多間質親。
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, quas? Nemo nostrum ad repellat ratione sunt quas qui odio fugit commodi! Quasi aperiam fugit aliquid itaque voluptatum? Porro distinctio culpa modi perferendis! Saepe, eius alias aperiam animi labore et quam necessitatibus, dolores illo voluptates molestias sit mollitia nisi doloribus iure.
                 </p>
             </v-col>
         </v-row>
@@ -94,27 +95,27 @@
                 <div class="position-absolute detail-map-right-corner elevation-10">
                     <div class="text-center">
                         <v-icon size="30" color="white">mdi-map-marker-outline</v-icon>
-                        <p class="mb-0 font-color-white" style="font-size: 10px;">個的管之</p>
+                        <p class="mb-0 font-color-white" style="font-size: 10px;">location</p>
                     </div>
                 </div>
                 <div class="position-absolute detail-map-left-corner">
-                    <p class="mb-0" style="font-size: 15px;">去服有積</p>
+                    <p class="mb-0" style="font-size: 15px;">remote</p>
                 </div>
             </v-col>
         </v-row>
         <v-row>
             <v-col cols="12">
-                <p class="mb-0 drowdown-title-font">合北就但</p>
+                <p class="mb-0 drowdown-title-font">HISTORY</p>
             </v-col>
-            <v-col cols="12">
+            <v-col cols="12" class="pt-0">
                 <p class="mb-0" style="font-size: 15px; color: #999999;">
-                    <read-more more-str="全文" text="風企清他就個的管之不神細去服有積轉出全多在動漸空小復不共人在型失時趣斷、程以己平眼新的看女這康北合，大起配孩用……帶親動孩遠安學這個家特小青數遊火是三前意改影不行於男了，如我可我技：山時都底要。走當切，縣冷我決：如已學能有早課際以每不整外作樹層過有說天世方同出過作程痛，南一別藝百品列，古出這命情完過說格說，產會保道際門感！己加多間質親。風企清他就個的管之不神細去服有積轉出全多在動漸空小復不共人在型失時趣斷、程以己平眼新的看女這康北合，大起配孩用……帶親動孩遠安學這個家特小青數遊火是三前意改影不行於男了，如我可我技：山時都底要。走當切，縣冷我決：如已學能有早課際以每不整外作樹層過有說天世方同出過作程痛，南一別藝百品列，古出這命情完過說格說，產會保道際門感！己加多間質親。風企清他就個的管之不神細去服有積轉出全多在動漸空小復不共人在型失時趣斷、程以己平眼新的看女這康北合，大起配孩用……帶親動孩遠安學這個家特小青數遊火是三前意改影不行於男了，如我可我技：山時都底要。走當切，縣冷我決：如已學能有早課際以每不整外作樹層過有說天世方同出過作程痛，南一別藝百品列，古出這命情完過說格說，產會保道際門感！己加多間質親。風企清他就個的管之不神細去服有積轉出全多在動漸空小復不共人在型失時趣斷、程以己平眼新的看女這康北合，大起配孩用……帶親動孩遠安學這個家特小青數遊火是三前意改影不行於男了，如我可我技：山時都底要。走當切，縣冷我決：如已學能有早課際以每不整外作樹層過有說天世方同出過作程痛，南一別藝百品列，古出這命情完過說格說，產會保道際門感！己加多間質親。風企清他就個的管之不神細去服有積轉出全多在動漸空小復不共人在型失時趣斷、程以己平眼新的看女這康北合，大起配孩用……帶親動孩遠安學這個家特小青數遊火是三前意改影不行於男了，如我可我技：山時都底要。走當切，縣冷我決：如已學能有早課際以每不整外作樹層過有說天世方同出過作程痛，南一別藝百品列，古出這命情完過說格說，產會保道際門感！己加多間質親。風企清他就個的管之不神細去服有積轉出全多在動漸空小復不共人在型失時趣斷、程以己平眼新的看女這康北合，大起配孩用……帶親動孩遠安學這個家特小青數遊火是三前意改影不行於男了，如我可我技：山時都底要。走當切，縣冷我決：如已學能有早課際以每不整外作樹層過有說天世方同出過作程痛，南一別藝百品列，古出這命情完過說格說，產會保道際門感！己加多間質親。風企清他就個的管之不神細去服有積轉出全多在動漸空小復不共人在型失時趣斷、程以己平眼新的看女這康北合，大起配孩用……帶親動孩遠安學這個家特小青數遊火是三前意改影不行於男了，如我可我技：山時都底要。走當切，縣冷我決：如已學能有早課際以每不整外作樹層過有說天世方同出過作程痛，南一別藝百品列，古出這命情完過說格說，產會保道際門感！己加多間質親。風企清他就個的管之不神細去服有積轉出全多在動漸空小復不共人在型失時趣斷、程以己平眼新的看女這康北合，大起配孩用……帶親動孩遠安學這個家特小青數遊火是三前意改影不行於男了，如我可我技：山時都底要。走當切，縣冷我決：如已學能有早課際以每不整外作樹層過有說天世方同出過作程痛，南一別藝百品列，古出這命情完過說格說，產會保道際門感！己加多間質親。" link="#" less-str="收起" :max-chars="250"></read-more>
+                    <read-more more-str="read more" link="#" less-str="read less" :max-chars="250" text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt a unde blanditiis sit sapiente porro beatae eius facilis, quam earum deleniti perspiciatis ipsa dolorem ratione reiciendis voluptatibus alias debitis totam autem culpa molestias. Laboriosam at praesentium ab amet minima illum, eos quis natus aperiam quibusdam eveniet voluptatem, eius non deleniti saepe unde. Eos impedit recusandae, voluptatum natus accusamus dolorum nesciunt nemo labore adipisci iure. Temporibus animi iure blanditiis unde ipsum distinctio, quis similique perferendis exercitationem quas sed iusto dignissimos maiores magni quos laboriosam, voluptatem inventore! Minima rem iure eos corporis! Quas hic quae illo vitae assumenda delectus. Quos, delectus! Tempore aperiam aliquid in excepturi! Quisquam tempore optio libero minima quos beatae qui reiciendis aperiam error, amet fugit maxime laudantium dolorum delectus! Provident, vel repellat aperiam sunt facere optio veniam sint tenetur dolore maiores aliquam sapiente minus inventore, explicabo odit cupiditate dolores, recusandae eveniet doloribus in natus exercitationem dicta impedit. Asperiores officiis molestias eaque, suscipit eius blanditiis, necessitatibus fugit porro facere ipsam doloribus ad quaerat, veritatis aut nulla sed. Alias tempora, consequatur fugiat ullam voluptates, quibusdam autem ad reprehenderit magnam debitis in, reiciendis praesentium ipsum iure quasi illo tempore error eveniet aperiam culpa vitae magni eius corrupti saepe? Ducimus, maxime aliquid!" ></read-more>
                 </p>
             </v-col>
         </v-row>
         <v-row>
             <v-col cols="12">
-                <p class="mb-0 drowdown-title-font">合北就但</p>
+                <p class="mb-0 drowdown-title-font">CULTURE</p>
             </v-col>
             <v-col cols="12" class="d-flex horizontal-scroll">
                 <div class="mr-3 position-relative" v-for="(item, index) in bannerImageList" :key="index" >
@@ -122,20 +123,20 @@
                 </div>
             </v-col>
             <v-col cols="12" class="">
-                <v-chip class="mr-2 mb-2" label small > 最多 </v-chip>
-                <v-chip class="mr-2 mb-2" label small > 北就但 </v-chip>
+                <v-chip class="mr-2 mb-2" label small > clean </v-chip>
+                <v-chip class="mr-2 mb-2" label small > nice </v-chip>
                 <v-chip class="mr-2 mb-2" label small > trust </v-chip>
                 <v-chip class="mr-2 mb-2" label small > something </v-chip>
                 <v-chip class="mr-2 mb-2" label small > lorem </v-chip>
-                <v-chip class="mr-2 mb-2" label small > 合北就但 </v-chip>
-                <v-chip class="mr-2 mb-2" label small > 北就但 </v-chip>
-                <v-chip class="mr-2 mb-2" label small > 最多 </v-chip>
+                <v-chip class="mr-2 mb-2" label small > cool </v-chip>
+                <v-chip class="mr-2 mb-2" label small > great </v-chip>
+                <v-chip class="mr-2 mb-2" label small > perfect </v-chip>
                 <v-chip class="mr-2 mb-2" label small > lorem </v-chip>
-                <v-chip class="mr-2 mb-2" label small > 最多 </v-chip>
+                <v-chip class="mr-2 mb-2" label small > light </v-chip>
             </v-col>
         </v-row>
         <v-row class="detail-fixed-bottom">
-            <p class="mb-0" style="font-size: 18px; color: #fff">合北就但</p>
+            <p class="mb-0" style="font-size: 18px; color: #fff">APPLY NOW</p>
         </v-row>
     </v-container>
 </template>

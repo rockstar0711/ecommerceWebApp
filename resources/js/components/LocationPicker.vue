@@ -1,5 +1,5 @@
 <template>
-    <v-bottom-sheet :value="tagPicker">
+    <v-bottom-sheet :value="locationPicker">
         <v-sheet  class="text-center" height="300px" >
             <v-row >
                 <v-col cols="12" class="d-flex align-center justify-space-between">
@@ -13,7 +13,7 @@
             </v-row>
             <div class="py-3">
                  <pd-select-box style="position: fixed;bottom: 0;width: 100%">
-                    <pd-select-item ref="tag" :listData="tagData" v-model="tag"></pd-select-item>
+                    <pd-select-item ref="location" :listData="locationData" v-model="location"></pd-select-item>
                 </pd-select-box>
             </div>
         </v-sheet>
@@ -22,37 +22,36 @@
 
 <script>
 export default {
-
+    
     props:{
-        tagPicker: {
+        locationPicker: {
             type: Boolean,
             required: true,
         },
     },
 
     data: () => ({
-        tag: '方知手視',
-        tagData: [
-            '安學這',
-            '在子增此',
-            '別藝百',
-            '實直由',
-            '星節親',
-            '方知手視',
-            '少世子',
-            '往世',
-            '地學十',
-            '親該',
+        location: 'Longgang',
+        locationData: [
+            'Luohu',
+            'Yantian',
+            'Pingshan',
+            'Nanshan',
+            'Longgang',
+            'Guangming',
+            'Futain',
+            'Longhua',
+            'Dapeng',
         ]
     }),
 
     methods:{
         onCancel(){
-            this.$emit("onCancelTagPicker");
+            this.$emit("onCancelLocationPicker");
         },
 
         onOk(){
-            this.$emit("onOkTagPicker", this.tag);
+            this.$emit("onOkLocationPicker", this.location);
         }
     }
 }

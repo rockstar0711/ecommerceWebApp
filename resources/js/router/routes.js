@@ -4,7 +4,7 @@ function page (path) {
 
 export default [
   { path: '/', name: 'welcome', component: page('welcome.vue') },
-  { path: '/introduce', name: 'introduce', component: page('introduce/index.vue') },
+  { path: '/home', name: 'home', component: page('home/index.vue') },
   { path: '/search', name: 'search', component: page('search/index.vue') },
   { path: '/gallery', name: 'gallery', component: page('gallery/index.vue') },
   { path: '/list', name: 'list', component: page('list/index.vue') },
@@ -25,7 +25,7 @@ export default [
   { path: '/email/verify/:id', name: 'verification.verify', component: page('auth/verification/verify.vue') },
   { path: '/email/resend', name: 'verification.resend', component: page('auth/verification/resend.vue') },
 
-  { path: '/home', name: 'home', component: page('home.vue') },
+  // { path: '/home', name: 'home', component: page('home.vue') },
   { path: '/settings',
     component: page('settings/index.vue'),
     children: [

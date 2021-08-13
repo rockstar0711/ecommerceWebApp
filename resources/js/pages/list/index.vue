@@ -4,15 +4,15 @@
       <v-btn class="cus-menu-icon-btn px-0" color="#B29A6E" dark >
         <v-icon>mdi-tune-variant</v-icon>
       </v-btn>
-      <v-btn class="cus-menu-btn px-6" outlined color="#CCCCCC" >
-        合北
-      </v-btn>
-      <v-btn class="cus-menu-btn px-6" outlined color="#CCCCCC" >
-        合此
-      </v-btn>
-      <v-btn class="cus-menu-btn px-6" outlined color="#CCCCCC" >
-        此健
-      </v-btn>
+      <div class="filter-btn">
+        <v-icon>mdi-home</v-icon> 
+      </div>
+      <div class="filter-btn">
+        <v-icon>mdi-map-marker-radius-outline</v-icon> 
+      </div>
+      <div class="filter-btn">
+        <v-icon>mdi-history</v-icon> 
+      </div>
     </v-row>
     <v-container class="ma-0 pa-0 mt-5" >
       <v-row class="mt-8" v-for="(item, index) in dataList" :key="index" >
@@ -21,16 +21,7 @@
             <v-img :height="$isMobile() ? '250' : '500'" :src="`${baseUrl}${item.path}`" v-for="item in item.imgArr" :key="item.id" alt="carousel" class="welcome-banner-carousel-img rounded-lg"  />
           </carousel>
           <div v-if="item.isSelled == true" class="position-absolute room-img-mark elevation-5 pa-3">
-            <div>
-              <div class="d-flex justify-center">
-                <p class="mb-0 room-img-mark-font pr-2">每</p> 
-                <p class="mb-0 room-img-mark-font">不</p> 
-              </div>
-              <div class="d-flex justify-center">
-                <p class="mb-0 room-img-mark-font pr-2">安</p> 
-                <p class="mb-0 room-img-mark-font">外</p> 
-              </div>
-            </div>
+            <p class="mb-0 font-weight-bold font-color-white">HOT</p>
           </div>
         </v-col>
         <v-col cols="12" class="pt-0">
@@ -99,10 +90,10 @@ export default {
     dataList: [
       {
         id: 1,
-        title: "能有早際以每",
-        category: '小復不',
+        title: "Full Stack Dev Role",
+        category: 'remote',
         viewCnt: 203,
-        location: '十在子',
+        location: 'shenyang',
         minPrice: 4000,
         maxPrice: 6000,
         isSelled: true,
@@ -135,10 +126,10 @@ export default {
       },
       {
         id: 2,
-        title: "作程痛",
-        category: '十排事',
+        title: "Frontend Dev Role",
+        category: 'local',
         viewCnt: 34,
-        location: '子子',
+        location: 'shenyang',
         minPrice: 455,
         maxPrice: 566,
         isSelled: false,
@@ -171,10 +162,10 @@ export default {
       },
       {
         id: 3,
-        title: "於參一於參",
-        category: '小方知手',
-        viewCnt: 203,
-        location: '只只',
+        title: "Backend Dev Role",
+        category: 'home',
+        viewCnt: 21,
+        location: 'shenyang',
         minPrice: 2000,
         maxPrice: null,
         isSelled: true,
@@ -207,10 +198,10 @@ export default {
       },
       {
         id: 4,
-        title: "到地十排事小",
-        category: '是',
-        viewCnt: 203,
-        location: '作去英',
+        title: "Devops Dev Role",
+        category: 'remote',
+        viewCnt: 90,
+        location: 'shenyang',
         minPrice: 500,
         maxPrice: 600,
         isSelled: false,
@@ -244,10 +235,10 @@ export default {
       },
       {
         id: 5,
-        title: "而建行業著企",
-        category: '出出',
-        viewCnt: 203,
-        location: '屋出',
+        title: "Moible Dev Role",
+        category: 'local',
+        viewCnt: 26,
+        location: 'shenyang',
         minPrice: 700,
         maxPrice: 800,
         isSelled: true,
@@ -281,10 +272,10 @@ export default {
       },
       {
         id: 6,
-        title: "平眼新的看女",
-        category: '權屋',
-        viewCnt: 203,
-        location: '像著目',
+        title: "Marketing manager Role",
+        category: 'local',
+        viewCnt: 87,
+        location: 'shenyang',
         minPrice: 1000,
         maxPrice: null,
         isSelled: false,

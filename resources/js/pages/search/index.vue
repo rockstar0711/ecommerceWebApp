@@ -16,37 +16,37 @@
         </v-row>
         <v-row class="mt-8">
             <v-col cols="12" class="pb-0">
-                <p class="mb-0 drowdown-title-font">合北就但</p>
+                <p class="mb-0 drowdown-title-font">Options</p>
             </v-col>
-            <v-col cols="6" class="pt-0" @click="toggleScopePicker">
+            <v-col cols="6" class="pt-0" @click="toggleLocationPicker">
                 <div class="dropdown-btn">
-                    <p class="mb-0 dropdown-font">{{scope == null ? '影不行於男了' : scope}}</p>
+                    <p class="mb-0 dropdown-font">{{location == null ? 'Select Location' : location}}</p>
                     <v-icon color="#B29A6E">mdi-menu-down</v-icon>
                 </div>
             </v-col>
-            <v-col cols="6" class="pt-0" @click="toggleTagPicker">
+            <v-col cols="6" class="pt-0" @click="toggleInstitutionPicker">
                 <div class="dropdown-btn">
-                    <p class="mb-0 dropdown-font">{{tag == null ? '影不行於男了' : tag}}</p>
+                    <p class="mb-0 dropdown-font">{{institution == null ? 'Select Institution' : institution}}</p>
                     <v-icon color="#B29A6E">mdi-menu-down</v-icon>
                 </div>
             </v-col>
             <v-col cols="12" class="pb-0">
-                <p class="mb-0 drowdown-title-font">合北就但</p>
+                <p class="mb-0 drowdown-title-font">Options</p>
             </v-col>
             <v-col cols="12" class="pt-0">
                 <div class="dropdown-btn">
-                    <p class="mb-0 dropdown-font">影不行於男了</p>
+                    <p class="mb-0 dropdown-font">Time</p>
                 </div>
             </v-col>
             <v-col cols="12">
                 <v-btn @click="navToList" class="search-btn-font" block tile dark color="#B29A6E" x-large>
-                    去英其好
+                    search
                 </v-btn>
             </v-col>
             <v-col @click="navToList" cols="12" class="pb-0 d-flex align-center justify-space-between">
-                <p class="mb-0 drowdown-title-font">合北就但</p>
+                <p class="mb-0 drowdown-title-font">Recommend for you</p>
                 <div class="d-flex align-center">
-                    <p class="mb-0 dropdown-font">影不行於</p>
+                    <p class="mb-0 dropdown-font">More</p>
                     <v-icon color="#B29A6E">mdi-chevron-right</v-icon>
                 </div>
             </v-col>
@@ -61,22 +61,22 @@
                 </div>
             </v-col>
         </v-row>
-        <ScopePicker 
-            :scopePicker="scopePicker"
-            @onCancelScopePicker="onCancelScopePicker"
-            @onOkScopePicker="onOkScopePicker"
+        <LocationPicker 
+            :locationPicker="locationPicker"
+            @onCancelLocationPicker="onCancelLocationPicker"
+            @onOkLocationPicker="onOkLocationPicker"
         />
-        <TagPicker 
-            :tagPicker="tagPicker"
-            @onCancelTagPicker="onCancelTagPicker"
-            @onOkTagPicker="onOkTagPicker"
+        <InstitutionPicker 
+            :institutionPicker="institutionPicker"
+            @onCancelInstitutionPicker="onCancelInstitutionPicker"
+            @onOkInstitutionPicker="onOkInstitutionPicker"
         />
     </v-container>
 </template>
 
 <script>
-import ScopePicker from '~/components/ScopePicker'
-import TagPicker from '~/components/TagPicker'
+import LocationPicker from '~/components/LocationPicker'
+import InstitutionPicker from '~/components/InstitutionPicker'
 
 export default {
     layout: 'basic',
@@ -86,42 +86,42 @@ export default {
     },
 
     components: {
-        ScopePicker,
-        TagPicker
+        LocationPicker,
+        InstitutionPicker
     },
 
     data: () => ({
         baseUrl: window.Laravel.base_url,
-        scopePicker: false,
-        tagPicker: false,
-        scope: null,
-        tag: null,
+        locationPicker: false,
+        institutionPicker: false,
+        location: null,
+        institution: null,
         horizontalList: [
             
             {
                 path: '/asset/img/welcome/room2.jpeg',
-                title: '我可我技',
-                category: '覺只'
+                title: 'Wang',
+                category: 'remote'
             },
             {
                 path: '/asset/img/welcome/room3.jpeg',
-                title: '小青數遊火',
-                category: '什無'
+                title: 'Greg',
+                category: 'local'
             },
             {
                 path: '/asset/img/welcome/room4.jpeg',
-                title: '求子過將度',
-                category: '靈下'
+                title: 'William',
+                category: 'remote'
             },
             {
                 path: '/asset/img/welcome/room5.jpeg',
-                title: '成名是喜原',
-                category: '星節親'
+                title: 'John',
+                category: 'local'
             },
             {
                 path: '/asset/img/welcome/room1.jpeg',
-                title: '品知',
-                category: '不共人'
+                title: 'Sammie',
+                category: 'local'
             },
             
         ]
@@ -132,30 +132,30 @@ export default {
             this.$router.push({name: 'list'});
         },
 
-        toggleScopePicker(){
-            this.scopePicker = !this.scopePicker;
+        toggleLocationPicker(){
+            this.locationPicker = !this.locationPicker;
         },
 
-        toggleTagPicker(){
-            this.tagPicker = !this.tagPicker;
+        toggleInstitutionPicker(){
+            this.institutionPicker = !this.institutionPicker;
         },
 
-        onCancelScopePicker(){
-            this.scopePicker = false;
+        onCancelLocationPicker(){
+            this.locationPicker = false;
         },
 
-        onOkScopePicker(scope){
-            this.scope = scope;
-            this.onCancelScopePicker();
+        onOkLocationPicker(location){
+            this.location = location;
+            this.onCancelLocationPicker();
         },
 
-        onCancelTagPicker(){
-            this.scopePicker = false;
+        onCancelInstitutionPicker(){
+            this.institutionPicker = false;
         },
 
-        onOkTagPicker(tag){
-            this.tag = tag
-            this.onCancelTagPicker();
+        onOkInstitutionPicker(institution){
+            this.institution = institution
+            this.onCancelInstitutionPicker();
         }
     }
 }

@@ -2,7 +2,7 @@
     <div class="position-fixed mo-bottom-nav-con">
         <div class="w-100" v-if="isShowBottomFab">
             <div class="d-flex align-center justify-space-between bg-white-translate pa-3">
-                <p class="mb-0" style="color: #B29A6E">多在動漸空小復不共人在型失時趣斷</p>
+                <p class="mb-0" style="color: #B29A6E">Feel free to contact us.</p>
                 <Fab />
             </div>
             <div style="height: 56px"></div>
@@ -16,19 +16,19 @@
             class=" bg-secondary mo-bottom-nav"
         >
             <v-btn  fab plain :ripple="false" class="mo-bottom-nav-btn-item " @click="onNav(0)">
-                <span>首页</span>
+                <span>Home</span>
                 <v-icon :color="value == 0 ? '#B29A6E' : '#000'">mdi-view-dashboard-outline</v-icon>
             </v-btn>
             <v-btn  fab plain :ripple="false" class="mo-bottom-nav-btn-item "  @click="onNav(1)">
-                <span>通讯录</span>
+                <span>Discover</span>
                 <v-icon :color="value == 1 ? '#B29A6E' : '#000'">mdi-text-box</v-icon>
             </v-btn>
             <v-btn  fab plain :ripple="false" class="mo-bottom-nav-btn-item " @click="onNav(2)">
-                <span>圈子</span>
+                <span>Search</span>
                 <v-icon :color="value == 2 ? '#B29A6E' : '#000'">mdi-magnify</v-icon>
             </v-btn>
             <v-btn  fab plain :ripple="false" class="mo-bottom-nav-btn-item " @click="onNav(3)">
-                <span>我的</span>
+                <span>Profile</span>
                 <v-icon :color="value == 3 ? '#B29A6E' : '#000'">mdi-calendar-check-outline</v-icon>
             </v-btn>
         </v-bottom-navigation>
@@ -67,7 +67,7 @@ export default {
     watch:{
         currentPath:{
             handler(val){
-                if(val.name == 'introduce'){
+                if(val.name == 'home'){
                     this.value = 0;
                 }
                 else if(val.name == 'welcome'){
@@ -94,7 +94,7 @@ export default {
     }),
     
     created(){
-        if(this.currentPath.name == 'introduce'){
+        if(this.currentPath.name == 'home'){
             this.value = 0;
             this.isShowBottomFab = false;
         }
@@ -118,7 +118,7 @@ export default {
             switch (val) {
                 case 0:
                     this.isShowBottomFab = false;
-                    this.$router.push({name:"introduce"})
+                    this.$router.push({name:"home"})
                     break;
             
                 case 1:

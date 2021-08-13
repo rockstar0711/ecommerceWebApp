@@ -7,7 +7,7 @@
                     <v-icon color="#000000" size="30">mdi-chevron-left</v-icon>
                 </div>
             </div>
-            <p class="mb-0 font-weight-bold">合北 Meetbest</p>
+            <p class="mb-0 font-weight-bold">Job Seeking</p>
             <div class="top-tab-container">
                 <div class="top-tab-element-right pr-2">
                     <v-icon color="#000000">mdi-dots-horizontal</v-icon>
@@ -68,7 +68,18 @@ export default {
 
     methods:{
         navToBack(){
-            this.$router.go(-1);
+            if(this.currentPath.name == 'faq.third'){
+                this.$router.push({name: 'faq.second'})
+            }
+            else if(this.currentPath.name == 'faq.second'){
+                this.$router.push({name: 'faq.first'})
+            }
+            else if(this.currentPath.name == 'faq.first'){
+                this.$router.push({name: 'home'})
+            }
+            else{
+                this.$router.go(-1);
+            }
         }
     }
 }

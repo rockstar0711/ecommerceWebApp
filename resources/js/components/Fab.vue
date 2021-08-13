@@ -8,7 +8,10 @@
                 <v-icon v-if="fab" size="65">
                     mdi-chevron-right
                 </v-icon>
-                <p v-else class="mb-0" style="font-weight: bold; font-size: 30px;">南</p>
+                <v-icon v-else size="37">
+                    mdi-contactless-payment
+                </v-icon>
+                <!-- <p v-else class="mb-0" style="font-weight: bold; font-size: 30px;">南</p> -->
             </v-btn>
         </template>
         <v-btn class="elevation-10" fab dark color="#B29A6E" >

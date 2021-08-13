@@ -2,8 +2,8 @@
     <v-container class="h-100">
         <v-row class="border-bottom-dark-gray">
             <v-tabs fixed-tabs background-color="white" color="#DC8E62" >
-                <v-tab class="gallery-cus-tab"> 十在子增 </v-tab>
-                <v-tab class="gallery-cus-tab"> 喜原作去 </v-tab>
+                <v-tab class="gallery-cus-tab"> Profile </v-tab>
+                <v-tab class="gallery-cus-tab"> Setting </v-tab>
             </v-tabs>
         </v-row>
         <v-row class="dark-bg-background height-without-header-footer">
