@@ -11,13 +11,13 @@
       <v-btn class="cus-menu-icon-btn px-0" color="#B29A6E" dark >
         <v-icon>mdi-tune-variant</v-icon>
       </v-btn>
-      <div class="filter-btn">
+      <div class="filter-btn" @click="toggleInstitutionPicker">
         <v-icon>mdi-home</v-icon> 
       </div>
-      <div class="filter-btn">
+      <div class="filter-btn" @click="toggleLocationPicker">
         <v-icon>mdi-map-marker-radius-outline</v-icon> 
       </div>
-      <div class="filter-btn">
+      <div class="filter-btn"  @click="toggleTimeagoPicker">
         <v-icon>mdi-history</v-icon> 
       </div>
     </v-row>
@@ -53,6 +53,22 @@
         </v-col>
       </v-row>
     </v-container>
+
+    <LocationPicker 
+      :locationPicker="locationPicker"
+      @onCancelLocationPicker="onCancelLocationPicker"
+      @onOkLocationPicker="onOkLocationPicker"
+    />
+    <InstitutionPicker 
+      :institutionPicker="institutionPicker"
+      @onCancelInstitutionPicker="onCancelInstitutionPicker"
+      @onOkInstitutionPicker="onOkInstitutionPicker"
+    />
+    <TimeagoPicker 
+      :timeagoPicker="timeagoPicker"
+      @onCancelTimeagoPicker="onCancelTimeagoPicker"
+      @onOkTimeagoPicker="onOkTimeagoPicker"
+    />
   </v-container>  
 </template>
 
@@ -60,13 +76,19 @@
 import { mapGetters } from 'vuex'
 import carousel from 'v-owl-carousel';
 import Unit from '~/components/Unit'
+import LocationPicker from '~/components/LocationPicker'
+import InstitutionPicker from '~/components/InstitutionPicker'
+import TimeagoPicker from '~/components/TimeagoPicker'
 
 export default {
   layout: 'basic',
 
   components:{
     carousel,
-    Unit
+    Unit,
+    LocationPicker,
+    InstitutionPicker,
+    TimeagoPicker
   },
 
   metaInfo () {
@@ -76,6 +98,14 @@ export default {
   data: () => ({
     title: window.config.appName,
     baseUrl: window.Laravel.base_url,
+
+    locationPicker: false,
+    institutionPicker: false,
+    timeagoPicker: false,
+    location: null,
+    institution: null,
+    timeago: null,
+
     bannerImageList: [
       {
         path: '/asset/img/welcome/room1.jpeg',
@@ -320,7 +350,46 @@ export default {
   methods: {
     navToDetail(){
       this.$router.push({name: 'detail'})
-    }
+    },
+
+    toggleLocationPicker(){
+      this.locationPicker = !this.locationPicker;
+    },
+
+    toggleInstitutionPicker(){
+      this.institutionPicker = !this.institutionPicker;
+    },
+
+    toggleTimeagoPicker(){
+      this.timeagoPicker = !this.timeagoPicker;
+    },
+
+    onCancelLocationPicker(){
+      this.locationPicker = false;
+    },
+
+    onOkLocationPicker(location){
+      this.location = location;
+      this.onCancelLocationPicker();
+    },
+
+    onCancelInstitutionPicker(){
+      this.institutionPicker = false;
+    },
+
+    onOkInstitutionPicker(institution){
+      this.institution = institution
+      this.onCancelInstitutionPicker();
+    },
+
+    onCancelTimeagoPicker(){
+      this.timeagoPicker = false;
+    },
+
+    onOkTimeagoPicker(timeago){
+      this.timeago = timeago;
+      this.onCancelTimeagoPicker();
+    },
   }
 }
 </script>
