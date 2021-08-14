@@ -9,6 +9,7 @@ export default [
   { path: '/gallery', name: 'gallery', component: page('gallery/index.vue') },
   { path: '/list', name: 'list', component: page('list/index.vue') },
   { path: '/detail', name: 'detail', component: page('detail/index.vue') },
+  { path: '/apply', name: 'apply', component: page('apply/index.vue') },
   { path: '/about', name: 'about', component: page('about/index.vue') },
   { path: '/faq', component: page('faq/index.vue'),
     children: [

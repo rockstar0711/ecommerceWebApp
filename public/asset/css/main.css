@@ -422,3 +422,16 @@ a#readless{
     position: relative;
     border-radius: 5px;
 }
+
+.apply-banner-image-overlap{
+    background: rgba(0,0,0,0.7);
+    color: white;
+    width: 100%;
+    bottom: 0px;
+    z-index: 1;
+}
+
+/* .cus-slider-range-thumb .v-input__control .v-input__slot .v-slider .v-slider__thumb-container:hover .v-slider__thumb:before {
+    -webkit-transform: scale(0.1)!important;
+    transform: scale(0.1)!important;
+} */

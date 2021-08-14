@@ -36,6 +36,7 @@ export default {
                     val.name == 'list' || 
                     val.name == 'detail' || 
                     val.name == 'about' ||
+                    val.name == 'apply' ||
                     val.path.includes('faq')
                 ){
                     this.isShowGoBackBtn = true;
@@ -53,6 +54,7 @@ export default {
             this.currentPath.name == 'list' ||
             this.currentPath.name == 'detail' ||
             this.currentPath.name == 'about' ||
+            this.currentPath.name == 'apply' ||
             this.currentPath.path.includes('faq')
         ){
             this.isShowGoBackBtn = true;

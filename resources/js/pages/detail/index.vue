@@ -135,7 +135,7 @@
                 <v-chip class="mr-2 mb-2" label small > light </v-chip>
             </v-col>
         </v-row>
-        <v-row class="detail-fixed-bottom">
+        <v-row class="detail-fixed-bottom" @click="navToApply">
             <p class="mb-0" style="font-size: 18px; color: #fff">APPLY NOW</p>
         </v-row>
     </v-container>
@@ -197,7 +197,9 @@ export default {
     }),
 
     methods:{
-        
+        navToApply(){
+            this.$router.push({name: "apply"})
+        }
     }
 }
 </script>

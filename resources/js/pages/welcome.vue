@@ -23,7 +23,7 @@
     </v-row>
     <v-container class="ma-0 pa-0 mt-5" style="margin-bottom: 150px!important;">
       <v-row class="mt-8" v-for="(item, index) in dataList" :key="index" >
-        <v-col cols="12" class="position-relative">
+        <v-col cols="12" class="position-relative" @click="navToDetail">
           <carousel class="" :nav="false" :items="1" :margin="0" :loop="false"  :autoplay="false" :autoplaySpeed="1500">
             <v-img :height="$isMobile() ? '250' : '500'" :src="`${baseUrl}${item.path}`" v-for="item in item.imgArr" :key="item.id" alt="carousel" class="welcome-banner-carousel-img rounded-lg"  />
           </carousel>
@@ -39,7 +39,7 @@
               </div>
               <div>
                 <v-chip outlined small color="#B29A6E" class="cus-chip-border-radius">{{item.location}}</v-chip>
-                <v-chip outlined small color="#B29A6E" class="cus-chip-border-radius">{{item.viewCnt}} viewed</v-chip>
+                <v-chip outlined small color="#B29A6E" class="cus-chip-border-radius">{{item.viewCnt}} people viewed</v-chip>
               </div>
             </v-col>  
             <v-col cols="4" class="d-flex align-center justify-end">
@@ -70,7 +70,7 @@ export default {
   },
 
   metaInfo () {
-    return { title: this.$t('home') }
+    return { title: "Discover" }
   },
 
   data: () => ({
@@ -315,6 +315,12 @@ export default {
 
   computed: mapGetters({
     authenticated: 'auth/check'
-  })
+  }),
+
+  methods: {
+    navToDetail(){
+      this.$router.push({name: 'detail'})
+    }
+  }
 }
 </script>
