@@ -1,6 +1,6 @@
 <template>
     <v-container>
-        <v-row class="bg-white">
+        <!-- <v-row class="bg-white">
             <v-col cols="12" class="bg-white-carusel-dot">
                 <carousel class="" :nav="false" :items="1" :margin="0" :loop="false"  :autoplay="false" >
                     <v-img :height="$isMobile() ? '250' : '500'" :src="`${baseUrl}${item.path}`" v-for="item in bannerImageList" :key="item.id" @click="navToRefer(item.id)" alt="carousel" class="welcome-banner-carousel-img rounded-lg"  />
@@ -30,7 +30,32 @@
                 </carousel-3d>
             </v-col>
         </v-row>
-        <Fab style="position: fixed; bottom: 100px; right: 12px" />
+        <Fab style="position: fixed; bottom: 100px; right: 12px" /> -->
+
+        <v-row>
+            <v-col cols="12" class="pa-0 position-relative">
+                <v-img :src="`${baseUrl}/asset/img/new/home_bg.jpg`" class="home-img"  gradient="to top right, rgba(100,115,201,.33), rgba(25,32,72,.7)" >
+                    <v-row class="d-flex align-center justify-space-between ma-0 py-5 px-3">
+                        <div class="logo-img">
+                            <v-img :src="`${baseUrl}/asset/img/new/logo.png`" height="60" width="60" />
+                        </div>
+                        <v-btn @click="navToApply" depressed color="#B29A6E" dark class="home-job-post-btn rounded-lg"> Post job </v-btn>
+                    </v-row>
+                    <div class="position-absolute home-content">
+                        <p>Teach Meet</p>
+                        <v-btn outlined color="white" class="rounded-lg" @click="navToAbout" >
+                            About us
+                            <v-icon right> mdi-arrow-right</v-icon>
+                        </v-btn>
+                    </div>
+                    <div class="position-absolute home-speaker"> 
+                        <v-icon color="white" size="30">
+                            mdi-volume-high
+                        </v-icon>
+                    </div>
+                </v-img>
+            </v-col>
+        </v-row>
     </v-container>
 </template>
 
@@ -152,6 +177,14 @@ export default {
                     this.$router.push({name: 'about'});
                 }
             }
+        },
+
+        navToApply(){
+            this.$router.push({name:'apply'})
+        },
+
+        navToAbout(){
+            this.$router.push({name: 'about'})
         }
     }
 }

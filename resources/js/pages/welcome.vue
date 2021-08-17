@@ -1,18 +1,25 @@
 <template>
   <v-container class="bg-white">
     <v-row class="bg-white">
-      <v-col cols="12" class="pa-0">
-        <carousel class="" :nav="false" :items="1" :margin="0" :loop="false"  :autoplay="true" :autoplaySpeed="1500">
-          <v-img :height="$isMobile() ? '200' : '500'" :src="`${baseUrl}${item.path}`" v-for="item in bannerImageList" :key="item.id" alt="carousel" class="welcome-banner-carousel-img"  />
+      <v-col cols="12" class="pa-0 position-relative">
+        <carousel class="" :nav="false" :items="1" :margin="0" :loop="false" >
+          <v-img :height="$isMobile() ? '300' : '500'" :src="`${baseUrl}${item.path}`" v-for="item in bannerImageList" :key="item.id" alt="carousel" class="welcome-banner-carousel-img"  />
         </carousel>
+        <div class="welcome-banner-tag">
+          <p class="mb-0">teach Meet</p>
+        </div>
+        <div class="welcome-banner-swipe">
+          <v-icon color="white" left> mdi-arrow-left</v-icon>
+          <p class="mb-0"> Swipe </p>
+        </div>
       </v-col>
     </v-row>
     <v-row class="py-5 align-center justify-space-around menu-bar-shadow bg-white">
-      <v-btn class="cus-menu-icon-btn px-0" color="#B29A6E" dark >
+      <v-btn class="cus-menu-icon-btn px-0" color="#B29A6E" dark @click="navToFilter">
         <v-icon>mdi-tune-variant</v-icon>
       </v-btn>
       <div class="filter-btn" @click="toggleInstitutionPicker">
-        <v-icon>mdi-home</v-icon> 
+        <img :src="`${baseUrl}/asset/img/new/buildingIcon.png`" style="width: 24px; height: 24px"/>
       </div>
       <div class="filter-btn" @click="toggleLocationPicker">
         <v-icon>mdi-map-marker-radius-outline</v-icon> 
@@ -53,7 +60,7 @@
         </v-col>
       </v-row>
     </v-container>
-
+    <FloatingBack class="position-fixed" style="top: 12px; left: 12px; z-index: 4" />
     <LocationPicker 
       :locationPicker="locationPicker"
       @onCancelLocationPicker="onCancelLocationPicker"
@@ -79,6 +86,7 @@ import Unit from '~/components/Unit'
 import LocationPicker from '~/components/LocationPicker'
 import InstitutionPicker from '~/components/InstitutionPicker'
 import TimeagoPicker from '~/components/TimeagoPicker'
+import FloatingBack from '~/components/FloatingBack'
 
 export default {
   layout: 'basic',
@@ -88,7 +96,8 @@ export default {
     Unit,
     LocationPicker,
     InstitutionPicker,
-    TimeagoPicker
+    TimeagoPicker,
+    FloatingBack
   },
 
   metaInfo () {
@@ -108,16 +117,20 @@ export default {
 
     bannerImageList: [
       {
-        path: '/asset/img/welcome/room1.jpeg',
+        path: '/asset/img/new/list_bg.jpg',
         id: 1,
       },
       {
-        path: '/asset/img/welcome/room2.jpeg',
+        path: '/asset/img/welcome/room1.jpeg',
         id: 2,
       },
       {
-        path: '/asset/img/welcome/room3.jpeg',
+        path: '/asset/img/welcome/room2.jpeg',
         id: 3,
+      },
+      {
+        path: '/asset/img/welcome/room3.jpeg',
+        id: 4,
       },
     ],
 
@@ -350,6 +363,10 @@ export default {
   methods: {
     navToDetail(){
       this.$router.push({name: 'detail'})
+    },
+
+    navToFilter(){
+      this.$router.push({name: 'filter'})
     },
 
     toggleLocationPicker(){

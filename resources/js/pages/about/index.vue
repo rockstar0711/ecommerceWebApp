@@ -1,43 +1,17 @@
 <template>
     <v-container>
         <v-row>
-            <v-col cols="12" >
-                <carousel class="" :nav="false" :items="1" :margin="0" :loop="false"  :autoplay="false" >
-                    <v-img :height="$isMobile() ? '300' : '500'" :src="`${baseUrl}${item.path}`" v-for="item in bannerImageList" :key="item.id" alt="carousel" class="welcome-banner-carousel-img rounded-lg"  />
-                </carousel>
+            <v-col cols="12" class="pa-0" >
+                <v-img height="300" :src="`${baseUrl}/asset/img/new/about_bg.jpg`"   />
             </v-col>
             <v-col cols="12" class="text-center">
-                <p class="mb-0 font-weight-bold" style="font-size: 25px; ">About Us</p>
+                <p class="mb-0 font-weight-bold pt-4" >Welcome to Teach Meet</p>
             </v-col>
-            <v-col cols="12">
-                <p class="mb-0 text"> Welcome to [app name], </p>
-                <p class="mb-0"> your number one source for all things [product, ie: shoes, bags, dog treats]. We're dedicated to giving you the very best of [product], with a focus on [three characteristics, ie: dependability, customer service and uniqueness.] </p>
-                <p class="mb-0"> We hope you enjoy our products as much as we enjoy offering them to you. If you have any questions or comments, please don't hesitate to contact us.</p>
-                <p class="mb-0"> Sincerely,</p>
-                <p class="mb-0"> Name, CEO, Founder of small.work</p>
-            </v-col>
-        </v-row>
-        <v-row class="justify-center mt-10">
-            <v-col class="text-center">
-                <p class="mb-0 font-weight-bold" style="font-size: 25px; ">Top Clients</p>
-            </v-col>
-        </v-row>
-        <v-row>
-            <v-col class="pa-0">
-                <carousel-3d :width="250" :height="270" :border="0" :startIndex="2" >                
-                    <slide v-for="item in carouselImageList" :key="item.id" :index="item.id">
-                        <v-img height="270" :src="`${baseUrl}${item.path}`"  alt="carousel" class="welcome-banner-carousel-img rounded-lg" >
-                            <div class="w-100 h-100 d-flex align-center justify-center">
-                                <div class="text-center">
-                                    <p class="mb-0 font-weight-bold" :class="item.isBlack ? 'font-color-black' : 'font-color-white'" style="font-size: 14px;">CLIENT</p>
-                                    <p class="mb-0 font-weight-bold" :class="item.isBlack ? 'font-color-black' : 'font-color-white'" style="font-size: 27px;">{{item.title}}</p>
-                                    <div style="height: 145px"></div>
-                                    <p class="mb-0 font-weight-bold" :class="item.isBlack ? 'font-color-black' : 'font-color-white'" style="font-size: 15px;">{{item.content}}</p>
-                                </div>
-                            </div>
-                        </v-img>
-                    </slide>
-                </carousel-3d>
+            <v-col cols="12" class="text-center">
+                <p class="mb-0"> A qualified educational community dedicated towards building better relationships between educators and institutions.
+                 We’ve been driven by a simple goal – to simplify and enhance organic outreach nationwide for teacher recruitment.
+                 We knew there was a better way to get people excited about educational employment opportunity
+                 Join a new education community of 1500+ educators &#38; institutions living across Shenzhen.</p>
             </v-col>
         </v-row>
         <v-row class="about-tab-container">
@@ -49,54 +23,70 @@
             </v-col>
         </v-row>
         <v-row v-if="index == 1">
-            <v-col cols="12">
-                <p class="mb-0 py-10">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nam itaque reiciendis accusantium odit molestias pariatur! Expedita, eveniet accusantium, libero dicta optio facilis vel hic praesentium tempore, sunt deleniti dolor nisi maiores rem nihil provident suscipit nobis enim deserunt aliquam culpa soluta? Nam ratione assumenda doloribus pariatur recusandae doloremque eligendi!
-                </p>
-            </v-col>
-            <v-col cols="12" v-for="(item, index) in firstData" :key="index">
-                <v-img height="300" :src="`${baseUrl}${item.path}`" class="welcome-banner-carousel-img rounded-lg"  >
-                    <div class="w-100 h-100 d-flex align-center justify-center">
-                        <div class="text-center">
-                            <p class="mb-0 font-weight-bold font-color-white" style="font-size: 40px;">{{item.title}}</p>
+            <v-col cols="12" class="pa-0 position-relative">
+                <v-img height="300" :src="`${baseUrl}/asset/img/new/about_educators.jpg`" gradient="to top , rgba(0,0,0,.7), rgba(0,0,0,.7)" >
+                    <div class="w-100 h-100 d-flex align-center justify-start">
+                        <div class="text-left pl-3">
+                            <p class="mb-0 font-weight-bold font-color-white" style="font-size: 40px;">EDUCATORS</p>
+                            <p class="mb-0 font-weight-bold font-color-white" style="font-size: 40px;">WELCOME.</p>
                         </div>
                     </div>
+                    <v-icon class="position-absolute" size="60" color="#B29A6E" style="bottom: 0px; right: 20px">mdi-dots-horizontal</v-icon>
                 </v-img>
-                <p class="mb-0 py-10">
-                    {{item.content}}
-                </p>
+            </v-col>
+            <v-col cols="12" class="text-center">
+                <p class="mb-0 font-weight-bold py-4" >Land your dream job and discover who’s interested in you!</p>
+                <p class="mb-0">We’ve built a trusted, verified network of qualified schools here in Shenzhen. Get noticed by potential employers and connect directly with hiring managers.</p>
+            </v-col>
+            <v-col cols="12" class="text-center">
+                <p class="mb-0 font-weight-bold py-4" >Discover more about your future employer.</p>
+                <p class="mb-0">We believe a candidate is so much more than a CV, so we took the time to build a platform that gives you an inside view of your future work environment. Make an informed decision about your next educational career move.</p>
+            </v-col>
+            <v-col cols="12" class="text-center">
+                <p class="mb-0 font-weight-bold py-4" >Enjoy Pre-vetted schools authorized directly from the government.</p>
+                <p class="mb-0">Whether it’s searching for a new opportunity or just browsing, we’re here to support people like you to find their ideal teaching job.</p>
             </v-col>
         </v-row>
         <v-row v-else class="bg-light-brown">
-            <v-col cols="12">
-                <p class="mb-0 py-10">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos aliquid facilis quisquam. Est blanditiis nam a excepturi accusamus eos architecto, voluptates reprehenderit unde perferendis molestiae. Sapiente molestias expedita error fugit!
-                </p>
-            </v-col>
-            <v-col cols="12" v-for="(item, index) in secondData" :key="index">
-                <div v-if="item.title !== null" class="text-center">
-                    <p class="mb-0 font-weight-bold font-color-black" style="font-size: 40px;">{{item.title}}</p>
-                </div>
-                <div v-else>
-                    <v-img height="300" :src="`${baseUrl}${item.path}`" class="welcome-banner-carousel-img rounded-lg"  >
-                        <div class="w-100 h-100 d-flex align-center justify-center">
-                            <div class="text-center">
-                                <p class="mb-0 font-weight-bold font-color-white" style="font-size: 40px;">{{item.subtitle}}</p>
-                            </div>
+            <v-col cols="12" class="pa-0 position-relative">
+                <v-img height="300" :src="`${baseUrl}/asset/img/new/about_institutions.jpg`" gradient="to top , rgba(0,0,0,.7), rgba(0,0,0,.7)" >
+                    <div class="w-100 h-100 d-flex align-center justify-start">
+                        <div class="text-left pl-3">
+                            <p class="mb-0 font-weight-bold font-color-white" style="font-size: 40px;">INSTITUTIONS</p>
+                            <p class="mb-0 font-weight-bold font-color-white" style="font-size: 40px;">WELCOME.</p>
                         </div>
-                    </v-img>
-                    <p class="mb-0 py-10">
-                        {{item.content}}
-                    </p>
-                </div>
+                    </div>
+                    <v-icon class="position-absolute" size="60" color="#B29A6E" style="bottom: 0px; right: 20px">mdi-dots-horizontal</v-icon>
+                </v-img>
+            </v-col>
+            <v-col cols="12" class="text-center">
+                <p class="mb-0 font-weight-bold py-4" >Hiring qualified educators in Shenzhen can be complicated. So, let's simplify it. We are an open-source hiring platform for educational institutions. Whether it’s one person or a whole department, we supply you with everything you’ll need to meet your fulfillment needs.</p>
+            </v-col>
+            <v-col cols="12" class="text-center">
+                <p class="mb-0 font-weight-bold py-4" >Find and hire people quickly</p>
+                <p class="mb-0">Target people who are already interested in your institution and get candidates to apply, and respond, faster.</p>
+            </v-col>
+            <v-col cols="12" class="text-center">
+                <p class="mb-0 font-weight-bold py-4" >Engage Shenzhen’s most qualified talent pool</p>
+                <p class="mb-0">Once you’ve got your short list of candidates, connect with them using your personalized preferred way to connect. - direct URL links, Email or even your recruitment WeChat Id</p>
+            </v-col>
+            <v-col cols="12" class="text-center">
+                <p class="mb-0 font-weight-bold py-4" >Find the right people, fast</p>
+                <p class="mb-0">Cut down your hiring time using the our professional network. With Teach Meet, you’ll get direct qualified candidate with a talent pool of 1500+ professionals.</p>
+            </v-col>
+            <v-col cols="12" class="text-center">
+                <p class="mb-0 font-weight-bold py-4" >Diversity &#38; Inclusion</p>
+                <p class="mb-0">Diversity &#38; Inclusion is what we champion. Teach Meet is an <b> equal opportunity employer  </b>recruitment platform that is committed to the future of work. Being an equal opportunity employer means that your company provides the same benefits and opportunities for hiring and advancement to everyone without discriminating due to protected characteristics such as age, gender, sexual orientation, ethnicity, nationality, religion, disability, and medical history. Find your next great hire with Teach Meet.</p>
             </v-col>
         </v-row>
+        <FloatingBack class="position-fixed" style="top: 65px; left: 12px; z-index: 4" />
     </v-container>
 </template>
 
 <script>
 import carousel from 'v-owl-carousel';
 import { Carousel3d, Slide } from 'vue-carousel-3d';
+import FloatingBack from '~/components/FloatingBack'
 export default {
     layout: 'basic',
 
@@ -104,6 +94,7 @@ export default {
         carousel,
         Carousel3d,
         Slide,
+        FloatingBack
     },
 
     metaInfo () {
@@ -113,162 +104,6 @@ export default {
     data: () => ({
         baseUrl: window.Laravel.base_url,
         index: 1,
-        bannerImageList: [
-            {
-                path: '/asset/img/welcome/room2.jpeg',
-                id: 1,
-                title: '在動',
-                content: '才黑而建行業著',
-                isBlack: false,
-            },
-            {
-                path: '/asset/img/welcome/room1.jpeg',
-                id: 2,
-                title: '在動',
-                content: '才黑而建行業著',
-                isBlack: true,
-            },
-            {
-                path: '/asset/img/welcome/room3.jpeg',
-                id: 3,
-                title: '在動',
-                content: '才黑而建行業著',
-                isBlack: false,
-            },
-            {
-                path: '/asset/img/welcome/room4.jpeg',
-                id: 4,
-                title: '在動',
-                content: '才黑而建行業著',
-                isBlack: false,
-            },
-        ],
-
-        firstData: [
-            {
-                path: '/asset/img/welcome/room1.jpeg',
-                title: 'JOBS',
-                content : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos aliquid facilis quisquam. Est blanditiis nam a excepturi accusamus eos architecto, voluptates reprehenderit unde perferendis molestiae. Sapiente molestias expedita error fugit!'
-            },
-            {
-                path: '/asset/img/welcome/room2.jpeg',
-                title: 'JOBS',
-                content : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos aliquid facilis quisquam. Est blanditiis nam a excepturi accusamus eos architecto, voluptates reprehenderit unde perferendis molestiae. Sapiente molestias expedita error fugit!'
-            },
-            {
-                path: '/asset/img/welcome/room3.jpeg',
-                title: 'JOBS',
-                content : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos aliquid facilis quisquam. Est blanditiis nam a excepturi accusamus eos architecto, voluptates reprehenderit unde perferendis molestiae. Sapiente molestias expedita error fugit!'
-            },
-            {
-                path: '/asset/img/welcome/room4.jpeg',
-                title: 'JOBS',
-                content : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos aliquid facilis quisquam. Est blanditiis nam a excepturi accusamus eos architecto, voluptates reprehenderit unde perferendis molestiae. Sapiente molestias expedita error fugit!'
-            },
-            {
-                path: '/asset/img/welcome/room5.jpeg',
-                title: 'JOBS',
-                content : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos aliquid facilis quisquam. Est blanditiis nam a excepturi accusamus eos architecto, voluptates reprehenderit unde perferendis molestiae. Sapiente molestias expedita error fugit!'
-            },
-            {
-                path: '/asset/img/welcome/room6.jpeg',
-                title: 'JOBS',
-                content : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos aliquid facilis quisquam. Est blanditiis nam a excepturi accusamus eos architecto, voluptates reprehenderit unde perferendis molestiae. Sapiente molestias expedita error fugit!'
-            },
-        ],
-        secondData: [
-            {
-                path: '/asset/img/welcome/room1.jpeg',
-                title: null,
-                subtitle: 'JOBS',
-                content : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos aliquid facilis quisquam. Est blanditiis nam a excepturi accusamus eos architecto, voluptates reprehenderit unde perferendis molestiae. Sapiente molestias expedita error fugit!'
-            },
-            {
-                title: 'JOBS',
-            },
-            {
-                path: '/asset/img/welcome/room2.jpeg',
-                title: null,
-                subtitle: 'JOBS',
-                content : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos aliquid facilis quisquam. Est blanditiis nam a excepturi accusamus eos architecto, voluptates reprehenderit unde perferendis molestiae. Sapiente molestias expedita error fugit!'
-            },
-            {
-                path: '/asset/img/welcome/room3.jpeg',
-                title: null,
-                subtitle: 'JOBS',
-                content : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos aliquid facilis quisquam. Est blanditiis nam a excepturi accusamus eos architecto, voluptates reprehenderit unde perferendis molestiae. Sapiente molestias expedita error fugit!'
-            },
-            {
-                title: 'JOBS',
-            },
-            {
-                path: '/asset/img/welcome/room4.jpeg',
-                title: null,
-                subtitle: 'JOBS',
-                content : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos aliquid facilis quisquam. Est blanditiis nam a excepturi accusamus eos architecto, voluptates reprehenderit unde perferendis molestiae. Sapiente molestias expedita error fugit!'
-            },
-            {
-                path: '/asset/img/welcome/room5.jpeg',
-                title: null,
-                subtitle: 'JOBS',
-                content : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos aliquid facilis quisquam. Est blanditiis nam a excepturi accusamus eos architecto, voluptates reprehenderit unde perferendis molestiae. Sapiente molestias expedita error fugit!'
-            },
-            {
-                title: 'JOBS',
-            },
-            {
-                path: '/asset/img/welcome/room6.jpeg',
-                title: null,
-                subtitle: 'JOBS',
-                content : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos aliquid facilis quisquam. Est blanditiis nam a excepturi accusamus eos architecto, voluptates reprehenderit unde perferendis molestiae. Sapiente molestias expedita error fugit!'
-            },
-        ],
-
-        carouselImageList: [
-            {
-                path: '/asset/img/clients/client1.jpg',
-                id: 1,
-                title: 'Nikolay',
-                content: 'Prety.Ltd',
-                isBlack: false,
-            },
-            {
-                path: '/asset/img/clients/client2.jpg',
-                id: 2,
-                title: 'DanYang',
-                content: 'Pure.Ltd',
-                isBlack: true,
-            },
-            {
-                path: '/asset/img/clients/client6.png',
-                id: 6,
-                title: 'Williom',
-                content: 'Fun.Ltd',
-                isBlack: false,
-            },
-            {
-                path: '/asset/img/clients/client3.jpg',
-                id: 3,
-                title: 'Wang',
-                content: 'Chooe.Ltd',
-                isBlack: false,
-            },
-            {
-                path: '/asset/img/clients/client4.jpg',
-                id: 4,
-                title: 'GuoLing',
-                content: 'Wetran.Ltd',
-                isBlack: false,
-            },
-            {
-                path: '/asset/img/clients/client5.jpg',
-                id: 5,
-                title: 'Dawei',
-                content: 'Reggle.Ltd',
-                isBlack: false,
-            },
-            
-        ]
     }),
 
     methods:{

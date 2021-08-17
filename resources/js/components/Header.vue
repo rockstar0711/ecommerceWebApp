@@ -1,20 +1,15 @@
 <template>
-  <v-container class="header-container">
+  <v-container class="header-container" :class="isBlackBg == true ? 'bg-black' : 'bg-white'">
       <v-row>
-          <v-col cols="12" class="bg-white text-center position-relative">
+          <v-col cols="12" class="text-center position-relative">
             <div @click="navToBack" v-if="isShowGoBackBtn" class="header-go-back">
                 <div class="">
-                    <v-icon color="#000000" size="30">mdi-chevron-left</v-icon>
+                    <v-icon :color="isBlackBg ? '#fff' :'#000000'" size="23">mdi-close</v-icon>
                 </div>
             </div>
-            <p class="mb-0 font-weight-bold">Job Seeking</p>
+            <p class="mb-0 font-weight-bold" :class="isBlackBg == true ? 'font-color-white' : 'font-color-black'">{{title}}</p>
             <div class="top-tab-container">
-                <div class="top-tab-element-right pr-2">
-                    <v-icon color="#000000">mdi-dots-horizontal</v-icon>
-                </div>
-                <div class="pl-2">
-                    <v-icon color="#000000">mdi-record-circle-outline</v-icon>
-                </div>
+                <v-icon :color="isBlackBg ? '#fff' :'#000000'">mdi-dots-horizontal</v-icon>
             </div>
         </v-col>
       </v-row>
@@ -44,6 +39,14 @@ export default {
                 else {
                     this.isShowGoBackBtn = false;
                 }
+                if (val.name == 'about'){
+                    this.title = 'About';
+                    this.isBlackBg = true
+                }
+                else{
+                    this.title = 'Teach Meet';
+                    this.isBlackBg = false
+                }
             },
             deep: true
         }
@@ -62,10 +65,20 @@ export default {
         else {
             this.isShowGoBackBtn = false;
         }
+        if (this.currentPath.name == 'about'){
+            this.title = 'About';
+            this.isBlackBg = true
+        }
+        else{
+            this.title = 'Teach Meet';
+            this.isBlackBg = false
+        }
     },
 
     data: () => ({
         isShowGoBackBtn: false,
+        title: 'Teach Meet',
+        isBlackBg: false
     }),
 
     methods:{

@@ -11,6 +11,7 @@ export default [
   { path: '/detail', name: 'detail', component: page('detail/index.vue') },
   { path: '/apply', name: 'apply', component: page('apply/index.vue') },
   { path: '/about', name: 'about', component: page('about/index.vue') },
+  { path: '/filter', name: 'filter', component: page('filter/index.vue') },
   { path: '/faq', component: page('faq/index.vue'),
     children: [
       { path: '', redirect: { name: 'faq.first' } },

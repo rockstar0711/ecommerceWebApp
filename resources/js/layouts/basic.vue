@@ -41,6 +41,16 @@ export default {
                 else {
                     this.isShownFooter = true
                 }
+                if(
+                  this.currentPath.name == 'home' ||
+                  this.currentPath.name == 'welcome' ||
+                  this.currentPath.name == 'search'
+                ){
+                    this.isShownHeader = false
+                }
+                else {
+                    this.isShownHeader = true
+                }
             },
             deep: true
         }
@@ -58,6 +68,16 @@ export default {
         }
         else {
             this.isShownFooter = true
+        }
+        if(
+          this.currentPath.name == 'home' ||
+          this.currentPath.name == 'welcome' ||
+          this.currentPath.name == 'search'
+        ){
+            this.isShownHeader = false
+        }
+        else {
+            this.isShownHeader = true
         }
     },
 

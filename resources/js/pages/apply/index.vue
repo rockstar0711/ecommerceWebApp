@@ -1,8 +1,8 @@
 <template>
-    <v-container>
+    <v-container class="mb-16">
         <v-row>
             <v-col cols="12">
-                <p class="mb-0 drowdown-title-font font-color-brown">Header Image</p>
+                <p class="mb-0 drowdown-title-font font-color-brown">Head Banner Images</p>
             </v-col>
             <v-col cols="12" class="pt-0">
                 <v-file-input
@@ -33,7 +33,7 @@
                     prepend-icon="mdi-office-building-outline"
                     hide-details
                 ></v-text-field>
-                <p class="mb-0 ml-9 font-size-13">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia sapiente quidem dolores quam aliquam voluptate, itaque temporibus doloremque.</p>
+                <p class="mb-0 ml-9 font-size-13">Your schools name in English without the external: Ex: Co., Ltd., B.V., Pte., etc</p>
             </v-col>
         </v-row>
         <v-row>
@@ -50,7 +50,7 @@
                     prepend-icon="mdi-account-tie"
                     hide-details
                 ></v-text-field>
-                <p class="mb-0 ml-9 font-size-13">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia sapiente quidem dolores quam aliquam voluptate, itaque temporibus doloremque.</p>
+                <p class="mb-0 ml-9 font-size-13">A job post is limited to a single job. If your looking to post multiple roles, please check out our bundle option for more visibility. When posting a role please refer to these as position title examples: “ Drama Teacher ”or “ Head of School”. Your post will be visible for a total of 1month starting from date of authorization.</p>
             </v-col>
         </v-row>
         <v-row>
@@ -87,7 +87,7 @@
                         </v-chip>
                     </template>
                 </v-combobox>
-                <p class="mb-0 ml-9 font-size-13">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia sapiente quidem dolores quam aliquam voluptate, itaque temporibus doloremque.</p>
+                <p class="mb-0 ml-9 font-size-13">Primary tags are conveniently used for increasing visibility and key word searches.</p>
             </v-col>
         </v-row>
         <v-row>
@@ -104,7 +104,7 @@
                     prepend-icon="mdi-map-marker-outline"
                     hide-details
                 ></v-text-field>
-                <p class="mb-0 ml-9 font-size-13">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia sapiente quidem dolores quam aliquam voluptate, itaque temporibus doloremque.</p>
+                <p class="mb-0 ml-9 font-size-13">Primary location tags are conveniently used for increasing visibility and key word searches.</p>
             </v-col>
         </v-row>
         <v-row>
@@ -155,15 +155,23 @@
                         <!-- <p class="mb-0">usd / hour</p> -->
                     </div>
                 </div>
-                <p class="mb-0 font-size-13">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia sapiente quidem dolores quam aliquam voluptate, itaque temporibus doloremque.</p>
+                <p class="mb-0 font-size-13">All postings must include a salary range. Salary equivalents are measured in CYN and are based on monthly payouts. Teach Meet is a supporter of #OpenSalaries.</p>
             </v-col>
         </v-row>
         <v-row>
             <v-col cols="12">
                 <p class="mb-0 drowdown-title-font font-color-brown">Benefits</p>
             </v-col>
+            <v-col cols="3" class="d-flex pa-0 align-center justify-center mt-3"  v-for="(item, index) in benefitsList" :key="index">
+                <div class="text-center benefit-item d-flex align-center justify-center" :class="item.isSelected? 'benefit-active':'bg-white'" @click="toggleBenefitsIcon(index)">
+                    <div>
+                        <v-icon size="25" :color="item.isSelected?'#fff':'#757575'">{{item.icon}}</v-icon>
+                        <p class="mb-0" style="font-size: 12px; " :class="item.isSelected?'font-color-white':'font-color-black'">{{item.title}}</p>
+                    </div>
+                </div>
+            </v-col>
             <v-col cols="12" class="pt-0">
-                <v-combobox
+                <!-- <v-combobox
                     v-model="benefitTag"
                     :items="benefitTagList"
                     chips
@@ -188,16 +196,35 @@
                             @click:close="removeBenefitTag(item)"
                         >
                             <strong>{{ item }}</strong>&nbsp;
-                            <!-- <span>(cool)</span> -->
+                            <span>(cool)</span>
                         </v-chip>
                     </template>
                 </v-combobox>
-                <p class="mb-0 ml-9 font-size-13">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia sapiente quidem dolores quam aliquam voluptate, itaque temporibus doloremque.</p>
+                <p class="mb-0 ml-9 font-size-13">All postings must include. Visa reimbursement . Flight allowance. Medical check. Housing. National holidays Holiday, Social Insurance</p> -->
+                <p class="mb-0 font-size-13">All postings must include. Visa reimbursement . Flight allowance. Medical check. Housing. National holidays Holiday, Social Insurance</p>
+            </v-col>
+        </v-row>
+        <v-row>
+            <v-col cols="12" class="pb-0">
+                <p class="mb-0 drowdown-title-font font-color-brown">Upgrade your job post</p>
+            </v-col>
+            <v-col cols="12" class="pt-0">
+                <v-checkbox
+                    v-model="upgradeJob"
+                    label="Bundle Package: CYN +500"
+                    color="#B29A6E"
+                    hide-details
+                ></v-checkbox>
+                <p class="mb-0 ml-9 font-size-13"> • View page top banner slideshow display</p>
+                <p class="mb-0 ml-9 font-size-13"> • Discover page banner slideshow display</p>
+                <p class="mb-0 ml-9 font-size-13"> • Search page banner slideshow display</p>
+                <p class="mb-0 ml-9 font-size-13"> • Job post renewal after 30 days</p>
+                <p class="mb-0 ml-9 font-size-13"> • Hot job button</p>
             </v-col>
         </v-row>
         <v-row>
             <v-col cols="12">
-                <p class="mb-0 drowdown-title-font font-color-brown">Job description</p>
+                <p class="mb-0 drowdown-title-font font-color-brown">Job Detail</p>
             </v-col>
             <v-col cols="12" class="pt-0">
                 <v-textarea
@@ -211,26 +238,31 @@
                     counter
                     :rows="10"
                 ></v-textarea>
-                <p class="mb-0 ml-9 font-size-13">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia sapiente quidem dolores quam aliquam voluptate, itaque temporibus doloremque.</p>
+                <p class="mb-0 ml-9 font-size-13">We highly encourage this section to be as detailed as possible. Please consider the text format and style while posting.</p>
+            </v-col>
+        </v-row>
+        <v-row>
+            <v-col cols="12">
+                <p class="mb-0 drowdown-title-font font-color-brown">Our History</p>
+            </v-col>
+            <v-col cols="12" class="pt-0">
+                <v-textarea
+                    label="History"
+                    color="#B29A6E"
+                    outlined
+                    dense
+                    placeholder="Our school has strong histroy and culture."
+                    prepend-icon="mdi-order-bool-descending-variant"
+                    hide-details
+                    counter
+                    :rows="5"
+                ></v-textarea>
+                <p class="mb-0 ml-9 font-size-13">This section should briefly explain your institution’s history.</p>
             </v-col>
         </v-row>
         <v-row>
             <v-col cols="12">
                 <p class="mb-0 drowdown-title-font font-color-brown">How to apply</p>
-            </v-col>
-            <v-col cols="12" class="pt-0">
-                <v-textarea
-                    label="How to apply"
-                    color="#B29A6E"
-                    outlined
-                    dense
-                    placeholder="Lorem ipsum dolor sit amet."
-                    prepend-icon="mdi-order-bool-descending-variant"
-                    hide-details
-                    counter
-                    :rows="10"
-                ></v-textarea>
-                <p class="mb-0 ml-9 font-size-13">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia sapiente quidem dolores quam aliquam voluptate, itaque temporibus doloremque.</p>
             </v-col>
             <v-col cols="12">
                 <p class="mb-0" style="font-size:18px;">Apply Url</p>
@@ -245,7 +277,7 @@
                     prepend-icon="mdi-web"
                     hide-details
                 ></v-text-field>
-                <p class="mb-0 ml-9 font-size-13">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia sapiente quidem dolores quam aliquam voluptate, itaque temporibus doloremque.</p>
+                <p class="mb-0 ml-9 font-size-13">Funnel your applicants directly to your recruiting pool. URLs with a form for applicant to fill out generally receives more applicants.</p>
             </v-col>
             <v-col cols="12" class="text-center pa-0">
                 <p class="mb-0 font-weight-bold">OR</p>
@@ -263,7 +295,7 @@
                     prepend-icon="mdi-email-outline"
                     hide-details
                 ></v-text-field>
-                <p class="mb-0 ml-9 font-size-13">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia sapiente quidem dolores quam aliquam voluptate, itaque temporibus doloremque.</p>
+                <p class="mb-0 ml-9 font-size-13">This email is public and should connect to your institution’s hiring manager. This gives applicants the option to email you directly.</p>
             </v-col>
             <v-col cols="12" class="text-center pa-0">
                 <p class="mb-0 font-weight-bold">OR</p>
@@ -281,7 +313,18 @@
                     prepend-icon="mdi-wechat"
                     hide-details
                 ></v-text-field>
-                <p class="mb-0 ml-9 font-size-13">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia sapiente quidem dolores quam aliquam voluptate, itaque temporibus doloremque.</p>
+                <p class="mb-0 ml-9 font-size-13">This ID is public and should connect to your institution’s hiring manager. “WeChat Direct” has become our most popular. You have the option to post an official ID. This selection gets 3x’s the amount of responses.</p>
+            </v-col>
+            <v-col cols="12" class="">
+                <v-btn @click="navToPreview" class="search-btn-font" block tile dark color="#B29A6E">
+                    Preview
+                </v-btn>
+               
+            </v-col>
+            <v-col>
+                 <v-btn class="search-btn-font" block tile dark color="#B29A6E">
+                    Post Job
+                </v-btn>
             </v-col>
         </v-row>
         <Fab style="position: fixed; bottom: 12px; right: 12px;"/>
@@ -354,6 +397,43 @@ export default {
             },
             
         ],
+
+        benefitsList: [
+            {
+                icon: 'mdi-abacus',
+                title: 'Fitness',
+                isSelected: false,
+            },
+            {
+                icon: 'mdi-airballoon-outline',
+                title: 'Scenery',
+                isSelected: false,
+            },
+            {
+                icon: 'mdi-airplane-landing',
+                title: 'Travel',
+                isSelected: false,
+            },
+            {
+                icon: 'mdi-blender',
+                title: 'Coffe',
+                isSelected: false,
+            },
+            {
+                icon: 'mdi-camera-iris',
+                title: 'Photo',
+                isSelected: false,
+            },
+            {
+                icon: 'mdi-clover',
+                title: 'Lucky',
+                isSelected: false,
+            },
+
+        ],
+
+        benefits: [],
+        upgradeJob: false
     }),
 
     methods: {
@@ -365,6 +445,14 @@ export default {
             this.benefitTag.splice(this.benefitTag.indexOf(item), 1)
             this.benefitTag = [...this.benefitTag]
         },
+
+        toggleBenefitsIcon(index){
+            this.benefitsList[index].isSelected = !this.benefitsList[index].isSelected
+        },
+
+        navToPreview(){
+            this.$router.push({name: 'detail'})
+        }
     }
 }
 </script>

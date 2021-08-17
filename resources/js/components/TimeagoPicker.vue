@@ -35,7 +35,7 @@ export default {
         timeagoData: [
             'Any Time',
             'Past Month',
-            'Pase Week',
+            'Past Week',
             'Past 24 hours',
         ]
     }),

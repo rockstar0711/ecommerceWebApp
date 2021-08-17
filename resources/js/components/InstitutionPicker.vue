@@ -31,12 +31,12 @@ export default {
     },
 
     data: () => ({
-        institution: 'Training Centers',
+        institution: 'Private Education',
         institutionData: [
             'International Schools',
             'Public Schools',
-            'Training Centers',
-            'Kindergardens',
+            'Private Education',
+            'Primary Care',
             'Remote Teaching',
         ]
     }),

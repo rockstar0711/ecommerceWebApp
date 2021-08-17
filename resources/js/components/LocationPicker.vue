@@ -34,14 +34,11 @@ export default {
         location: 'Longgang',
         locationData: [
             'Luohu',
-            'Yantian',
-            'Pingshan',
+            'Baoan',
             'Nanshan',
             'Longgang',
-            'Guangming',
             'Futain',
             'Longhua',
-            'Dapeng',
         ]
     }),
 
