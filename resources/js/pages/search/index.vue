@@ -10,7 +10,7 @@
                         </div>
                     </div>
                 </v-img>
-                <v-icon class="position-absolute" size="53" color="#B29A6E" style="bottom: -10px; right: 7px">mdi-dots-horizontal</v-icon>
+                <v-icon class="position-absolute" size="53" color="#B29A6E" style="bottom: -10px; right: 20px">mdi-dots-horizontal</v-icon>
             </v-col>
         </v-row>
         <v-row class="mt-8">
@@ -35,7 +35,7 @@
             </v-col>
             <v-col cols="12" class="pt-0"  @click="toggleTimeagoPicker">
                 <div class="dropdown-btn">
-                    <p class="mb-0 dropdown-font">{{timeago == null ? 'Search Location' : timeago}}</p>
+                    <p class="mb-0 dropdown-font">{{timeago == null ? 'Date Posted' : timeago}}</p>
                     <v-icon color="#B29A6E">mdi-menu-down</v-icon>
                 </div>
             </v-col>
