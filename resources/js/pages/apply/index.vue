@@ -109,18 +109,21 @@
         </v-row>
         <v-row>
             <v-col cols="12">
-                <p class="mb-0 drowdown-title-font font-color-brown">Salary Range ($/hour)</p>
+                <p class="mb-0 drowdown-title-font font-color-brown">Salary Range (元/月)</p>
             </v-col>
             <v-col cols="12" class="pt-0">
-                <v-range-slider
-                    v-model="rangeSalary"
-                    :max="maxSalary"
-                    :min="minSalary"
-                    hide-details
-                    color="#B29A6E"
-                    class="align-center cus-slider-range-thumb"
-                >
-                </v-range-slider>
+                <div class="px-5">
+                    <v-range-slider
+                        v-model="rangeSalary"
+                        :max="maxSalary"
+                        :min="minSalary"
+                        hide-details
+                        step="100"
+                        color="#B29A6E"
+                        class="align-center cus-slider-range-thumb"
+                    >
+                    </v-range-slider>
+                </div>
                 <div class="d-flex align-center justify-space-between">
                     <div class="d-flex align-end">
                         <v-text-field
@@ -133,7 +136,7 @@
                             label="Min"
                             color="#B29A6E"
                             type="number"
-                            style="width: 60px"
+                            style="width: 80px"
                             @change="$set(rangeSalary, 0, $event)"
                         ></v-text-field>
                         <!-- <p class="mb-0">usd / hour</p> -->
@@ -149,7 +152,7 @@
                             label="Max"
                             color="#B29A6E"
                             type="number"
-                            style="width: 60px"
+                            style="width: 80px"
                             @change="$set(rangeSalary, 1, $event)"
                         ></v-text-field>
                         <!-- <p class="mb-0">usd / hour</p> -->
@@ -166,7 +169,7 @@
                 <div class="text-center benefit-item d-flex align-center justify-center" :class="item.isSelected? 'benefit-active':'bg-white'" @click="toggleBenefitsIcon(index)">
                     <div>
                         <v-icon size="25" :color="item.isSelected?'#fff':'#757575'">{{item.icon}}</v-icon>
-                        <p class="mb-0" style="font-size: 12px; " :class="item.isSelected?'font-color-white':'font-color-black'">{{item.title}}</p>
+                        <p class="mb-0 pt-1" style="font-size: 12px; line-height: 12px; " :class="item.isSelected?'font-color-white':'font-color-black'">{{item.title}}</p>
                     </div>
                 </div>
             </v-col>
@@ -201,7 +204,7 @@
                     </template>
                 </v-combobox>
                 <p class="mb-0 ml-9 font-size-13">All postings must include. Visa reimbursement . Flight allowance. Medical check. Housing. National holidays Holiday, Social Insurance</p> -->
-                <p class="mb-0 font-size-13">All postings must include. Visa reimbursement . Flight allowance. Medical check. Housing. National holidays Holiday, Social Insurance</p>
+                <p class="mb-0 font-size-13 pt-5">All postings must include. Visa reimbursement . Flight allowance. Medical check. Housing. National holidays Holiday, Social Insurance</p>
             </v-col>
         </v-row>
         <v-row>
@@ -210,16 +213,51 @@
             </v-col>
             <v-col cols="12" class="pt-0">
                 <v-checkbox
-                    v-model="upgradeJob"
+                    v-model="bundlePackage"
                     label="Bundle Package: CYN +500"
                     color="#B29A6E"
                     hide-details
                 ></v-checkbox>
-                <p class="mb-0 ml-9 font-size-13"> • View page top banner slideshow display</p>
-                <p class="mb-0 ml-9 font-size-13"> • Discover page banner slideshow display</p>
-                <p class="mb-0 ml-9 font-size-13"> • Search page banner slideshow display</p>
-                <p class="mb-0 ml-9 font-size-13"> • Job post renewal after 30 days</p>
-                <p class="mb-0 ml-9 font-size-13"> • Hot job button</p>
+            </v-col>
+            <v-col cols="12" class="pt-0">
+                <v-checkbox
+                    v-model="viewPageSlide"
+                    label="View page top banner slideshow display: CYN +300"
+                    color="#B29A6E"
+                    hide-details
+                ></v-checkbox>
+            </v-col>
+            <v-col cols="12" class="pt-0">
+                <v-checkbox
+                    v-model="discoverPageSlide"
+                    label="Discover page banner slideshow display: CYN +200"
+                    color="#B29A6E"
+                    hide-details
+                ></v-checkbox>
+            </v-col>
+            <v-col cols="12" class="pt-0">
+                <v-checkbox
+                    v-model="searchPageSlide"
+                    label="Search page banner slideshow display: CYN +100"
+                    color="#B29A6E"
+                    hide-details
+                ></v-checkbox>
+            </v-col>
+            <v-col cols="12" class="pt-0">
+                <v-checkbox
+                    v-model="renewalJobPost"
+                    label="Job post renewal after 30 days: CYN +1000"
+                    color="#B29A6E"
+                    hide-details
+                ></v-checkbox>
+            </v-col>
+            <v-col cols="12" class="pt-0">
+                <v-checkbox
+                    v-model="hotButton"
+                    label="Hot job button: CYN +50"
+                    color="#B29A6E"
+                    hide-details
+                ></v-checkbox>
             </v-col>
         </v-row>
         <v-row>
@@ -258,6 +296,25 @@
                     :rows="5"
                 ></v-textarea>
                 <p class="mb-0 ml-9 font-size-13">This section should briefly explain your institution’s history.</p>
+            </v-col>
+        </v-row>
+        <v-row>
+            <v-col cols="12">
+                <p class="mb-0 drowdown-title-font font-color-brown">Our Culture Images</p>
+            </v-col>
+            <v-col cols="12" class="pt-0">
+                <v-file-input
+                    label="Culture Image"
+                    color="#B29A6E"
+                    outlined
+                    dense
+                    show-size
+                    accept="image/*"
+                    placeholder="Please select an Culture Image"
+                    prepend-icon="mdi-camera"
+                    hide-details
+                ></v-file-input>
+                <p class="mb-0 ml-9 font-size-13">Culture image will be shown after integrated with backend.</p>
             </v-col>
         </v-row>
         <v-row>
@@ -350,13 +407,8 @@ export default {
     data: () => ({
         primaryTag: [],
         primaryTagList: [
-            'remote', 
-            'local',
-            'middle level',
-            'senior level',
-            'long term',
-            'full time', 
-            'part time'
+            'Full Time', 
+            'Part Time'
         ],
         benefitTag: [],
         benefitTagList: [
@@ -367,9 +419,9 @@ export default {
             'Photo',
             'Lucky', 
         ],
-        minSalary: 1,
-        maxSalary: 200,
-        rangeSalary: [1, 60],
+        minSalary: 5000,
+        maxSalary: 100000,
+        rangeSalary: [5000, 50000],
 
         baseUrl: window.Laravel.base_url,
         bannerImageList: [
@@ -400,41 +452,56 @@ export default {
 
         benefitsList: [
             {
-                icon: 'mdi-abacus',
-                title: 'Fitness',
+                icon: 'mdi-credit-card-outline',
+                title: 'Visa reimbursement',
                 isSelected: false,
             },
             {
-                icon: 'mdi-airballoon-outline',
-                title: 'Scenery',
+                icon: 'mdi-airplane',
+                title: 'Flight allowance',
                 isSelected: false,
             },
             {
-                icon: 'mdi-airplane-landing',
-                title: 'Travel',
+                icon: 'mdi-medical-bag',
+                title: 'Medical check',
                 isSelected: false,
             },
             {
-                icon: 'mdi-blender',
-                title: 'Coffe',
+                icon: 'mdi-office-building-outline',
+                title: 'Apartment',
                 isSelected: false,
             },
             {
-                icon: 'mdi-camera-iris',
-                title: 'Photo',
+                icon: 'mdi-party-popper',
+                title: 'Paid National holidays',
                 isSelected: false,
             },
             {
-                icon: 'mdi-clover',
-                title: 'Lucky',
+                icon: 'mdi-shield-account-outline',
+                title: 'Social Insurance',
+                isSelected: false,
+            },
+            {
+                icon: 'mdi-school-outline',
+                title: 'Training course',
+                isSelected: false,
+            },
+            {
+                icon: 'mdi-food',
+                title: 'Meals provided',
                 isSelected: false,
             },
 
         ],
 
         benefits: [],
-        upgradeJob: false
-    }),
+        bundlePackage: false,
+        viewPageSlide: false,
+        discoverPageSlide: false,
+        searchPageSlide: false,
+        renewalJobPost: false,
+        hotButton: false
+}),
 
     methods: {
         removePrimaryTag (item) {

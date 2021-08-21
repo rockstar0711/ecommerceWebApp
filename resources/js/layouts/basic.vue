@@ -42,9 +42,11 @@ export default {
                     this.isShownFooter = true
                 }
                 if(
-                  this.currentPath.name == 'home' ||
-                  this.currentPath.name == 'welcome' ||
-                  this.currentPath.name == 'search'
+                  val.name == 'home' ||
+                  val.name == 'welcome' ||
+                  val.name == 'search' ||
+                  val.name == 'about' ||
+                  val.name == 'filter'
                 ){
                     this.isShownHeader = false
                 }
@@ -72,7 +74,9 @@ export default {
         if(
           this.currentPath.name == 'home' ||
           this.currentPath.name == 'welcome' ||
-          this.currentPath.name == 'search'
+          this.currentPath.name == 'search' ||
+          this.currentPath.name == 'about' ||
+          this.currentPath.name == 'filter'
         ){
             this.isShownHeader = false
         }

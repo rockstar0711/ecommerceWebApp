@@ -9,27 +9,22 @@
         </v-row>
         <v-row class="mt-8">
             <v-col cols="8">
-                <p class="mb-0 font-weight-bold" style="font-size: 30px; ">Full Stack Engineer</p>
+                <p class="mb-0 font-weight-bold" style="font-size: 30px; line-height: 30px;">Full Stack Engineer</p>
             </v-col>
             <v-col cols="4" class="d-flex align-start px-0">
                 <div class="detail-title-badge">
                     <div>
-                        <p class="mb-0 pr-2" style="font-size: 30px">20</p>
+                        <p class="mb-0 pr-2" style="font-size: 30px">2000</p>
                     </div>
                     <div class="text-center">
-                        <p class="mb-0" style="font-size: 12px">~25</p>
-                        <p class="mb-0" style="font-size: 12px">usd / hour</p>
+                        <p class="mb-0" style="font-size: 12px">~2530</p>
+                        <p class="mb-0" style="font-size: 12px">元/月</p>
                     </div>
                 </div>
             </v-col>
-            <v-col cols="12">
-                <p class="mb-0" style="font-size: 18px">ShenYang</p>
-            </v-col>
             <v-col cols="12" class="pt-0 d-flex justify-space-between">
                 <div class="d-flex align-center">
-                    <v-chip outlined small color="#B7B7B7" class="cus-detail-top-chip mr-2">remote</v-chip>
-                    <v-chip outlined small color="#B7B7B7" class="cus-detail-top-chip mr-2">senior level</v-chip>
-                    <v-chip outlined small color="#B7B7B7" class="cus-detail-top-chip mr-2">long term</v-chip>
+                    <v-chip outlined small color="#B7B7B7" class="cus-detail-top-chip mr-2">Shenyang</v-chip>
                 </div>
                 <v-chip outlined small color="#B7B7B7" class="cus-detail-top-chip">
                     <v-icon> mdi-account </v-icon> 25
@@ -121,18 +116,6 @@
                 <div class="mr-3 position-relative" v-for="(item, index) in bannerImageList" :key="index" >
                     <v-img height="200" width="250" :src="`${baseUrl}${item.path}`" class="welcome-banner-carousel-img " />
                 </div>
-            </v-col>
-            <v-col cols="12" class="">
-                <v-chip class="mr-2 mb-2" label small > clean </v-chip>
-                <v-chip class="mr-2 mb-2" label small > nice </v-chip>
-                <v-chip class="mr-2 mb-2" label small > trust </v-chip>
-                <v-chip class="mr-2 mb-2" label small > something </v-chip>
-                <v-chip class="mr-2 mb-2" label small > lorem </v-chip>
-                <v-chip class="mr-2 mb-2" label small > cool </v-chip>
-                <v-chip class="mr-2 mb-2" label small > great </v-chip>
-                <v-chip class="mr-2 mb-2" label small > perfect </v-chip>
-                <v-chip class="mr-2 mb-2" label small > lorem </v-chip>
-                <v-chip class="mr-2 mb-2" label small > light </v-chip>
             </v-col>
         </v-row>
         <v-row class="detail-fixed-bottom" @click="navToApply">

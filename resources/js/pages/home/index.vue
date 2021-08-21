@@ -34,25 +34,24 @@
 
         <v-row>
             <v-col cols="12" class="pa-0 position-relative">
-                <v-img :src="`${baseUrl}/asset/img/new/home_bg.jpg`" class="home-img"  gradient="to top right, rgba(100,115,201,.33), rgba(25,32,72,.7)" >
-                    <v-row class="d-flex align-center justify-space-between ma-0 py-5 px-3">
+                <v-img :src="`${baseUrl}/asset/img/new/home_bg_update.jpg`" class="home-img"  gradient="to top, rgba(0,0,0,.5), rgba(0,0,0,.5)" >
+                    <v-row class="d-flex align-center justify-space-between ma-0 py-5 px-3 pt-7">
                         <div class="logo-img">
                             <v-img :src="`${baseUrl}/asset/img/new/logo.png`" height="60" width="60" />
                         </div>
-                        <v-btn @click="navToApply" depressed color="#B29A6E" dark class="home-job-post-btn rounded-lg"> Post job </v-btn>
+                        <v-btn @click="navToApply" depressed color="#6C5533" dark class="lowercase-btn rounded-lg"> Post job </v-btn>
                     </v-row>
                     <div class="position-absolute home-content">
-                        <p>Teach Meet</p>
-                        <v-btn outlined color="white" class="rounded-lg" @click="navToAbout" >
-                            About us
-                            <v-icon right> mdi-arrow-right</v-icon>
+                        <img :src="`${baseUrl}/asset/img/new/full_logo.png`" alt="" class="full-logo-img">
+                        <v-btn outlined color="white" class="rounded-lg lowercase-btn mt-10 px-40px" @click="navToAbout">
+                            Welcome
                         </v-btn>
                     </div>
-                    <div class="position-absolute home-speaker"> 
+                    <!-- <div class="position-absolute home-speaker"> 
                         <v-icon color="white" size="30">
                             mdi-volume-high
                         </v-icon>
-                    </div>
+                    </div> -->
                 </v-img>
             </v-col>
         </v-row>

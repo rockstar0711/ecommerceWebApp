@@ -1,8 +1,8 @@
 <template>
-    <v-container>
+    <v-container class="mb-16 pb-16">
         <v-row>
             <v-col class="pa-0 position-relative" >
-                <v-img height="250" :src="`${baseUrl}/asset/img/new/about_educators.jpg`" class="welcome-banner-carousel-img" gradient="to top , rgba(0,0,0,.7), rgba(0,0,0,.7)" >
+                <v-img height="250" :src="`${baseUrl}/asset/img/new/about_bg_update.jpg`" class="welcome-banner-carousel-img" >
                     <div class="w-100 h-100 d-flex align-center justify-center">
                         <div class="text-center">
                             <p class="mb-0 font-weight-bold font-color-white" style="font-size: 40px;">SEARCH</p>
@@ -10,6 +10,7 @@
                         </div>
                     </div>
                 </v-img>
+                <!-- <v-img height="300" :src="`${baseUrl}/asset/img/new/about_bg_update.jpg`"   /> -->
                 <v-icon class="position-absolute" size="53" color="#B29A6E" style="bottom: -10px; right: 20px">mdi-dots-horizontal</v-icon>
             </v-col>
         </v-row>

@@ -2,16 +2,17 @@
   <v-container class="bg-white">
     <v-row class="bg-white">
       <v-col cols="12" class="pa-0 position-relative">
-        <carousel class="" :nav="false" :items="1" :margin="0" :loop="false" >
+        <v-img :height="$isMobile() ? '246' : '500'" :src="`${baseUrl}/asset/img/new/list_bg_update.jpg`" class="welcome-banner-carousel-img"  />
+        <!-- <carousel class="" :nav="false" :items="1" :margin="0" :loop="false" >
           <v-img :height="$isMobile() ? '300' : '500'" :src="`${baseUrl}${item.path}`" v-for="item in bannerImageList" :key="item.id" alt="carousel" class="welcome-banner-carousel-img"  />
-        </carousel>
-        <div class="welcome-banner-tag">
+        </carousel> -->
+        <!-- <div class="welcome-banner-tag">
           <p class="mb-0">teach Meet</p>
         </div>
         <div class="welcome-banner-swipe">
           <v-icon color="white" left> mdi-arrow-left</v-icon>
           <p class="mb-0"> Swipe </p>
-        </div>
+        </div> -->
       </v-col>
     </v-row>
     <v-row class="py-5 align-center justify-space-around menu-bar-shadow bg-white">
@@ -42,7 +43,7 @@
           <v-row class="align-start">
             <v-col cols="8">
               <div>
-                <p class="mb-0" style="font-size: 20px; color:#B29A6E">{{item.category}} - {{item.title}}</p>
+                <p class="mb-0" style="font-size: 20px; color:#B29A6E">{{item.title}}</p>
               </div>
               <div>
                 <v-chip outlined small color="#B29A6E" class="cus-chip-border-radius">{{item.location}}</v-chip>
@@ -117,7 +118,7 @@ export default {
 
     bannerImageList: [
       {
-        path: '/asset/img/new/list_bg.jpg',
+        path: '/asset/img/new/list_bg_update.jpg',
         id: 1,
       },
       {

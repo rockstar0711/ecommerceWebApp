@@ -2,7 +2,7 @@
     <v-container>
         <v-row>
             <v-col cols="12" class="pa-0" >
-                <v-img height="300" :src="`${baseUrl}/asset/img/new/about_bg.jpg`"   />
+                <v-img height="300" :src="`${baseUrl}/asset/img/new/about_bg_update.jpg`"   />
             </v-col>
             <v-col cols="12" class="text-center">
                 <p class="mb-0 font-weight-bold pt-4" >Welcome to Teach Meet</p>
@@ -68,7 +68,7 @@
             </v-col>
             <v-col cols="12" class="text-center">
                 <p class="mb-0 font-weight-bold py-4" >Engage Shenzhen’s most qualified talent pool</p>
-                <p class="mb-0">Once you’ve got your short list of candidates, connect with them using your personalized preferred way to connect. - direct URL links, Email or even your recruitment WeChat Id</p>
+                <p class="mb-0">Once you’ve got your short list of candidates, connect with them using your personalized preferred way to connect. - direct URL links, Email or even your recruitment WeChat Id.</p>
             </v-col>
             <v-col cols="12" class="text-center">
                 <p class="mb-0 font-weight-bold py-4" >Find the right people, fast</p>
@@ -79,7 +79,7 @@
                 <p class="mb-0">Diversity &#38; Inclusion is what we champion. Teach Meet is an <b> equal opportunity employer  </b>recruitment platform that is committed to the future of work. Being an equal opportunity employer means that your company provides the same benefits and opportunities for hiring and advancement to everyone without discriminating due to protected characteristics such as age, gender, sexual orientation, ethnicity, nationality, religion, disability, and medical history. Find your next great hire with Teach Meet.</p>
             </v-col>
         </v-row>
-        <FloatingBack class="position-fixed" style="top: 65px; left: 12px; z-index: 4" />
+        <FloatingBack class="position-fixed" style="top: 12px; left: 12px; z-index: 4" />
     </v-container>
 </template>
 

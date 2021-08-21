@@ -3,10 +3,10 @@
         <v-sheet  class="text-center" height="300px" >
             <v-row >
                 <v-col cols="12" class="d-flex align-center justify-space-between">
-                    <v-btn class="" text  color="red" @click="onCancel" >
+                    <v-btn class="" text  color="#7D7D7D" @click="onCancel" >
                         Close
                     </v-btn>
-                    <v-btn class="" text  color="green" @click="onOk" >
+                    <v-btn class="" text  color="#52B26C" @click="onOk" >
                         Ok
                     </v-btn>
                 </v-col>

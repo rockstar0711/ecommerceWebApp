@@ -146,12 +146,12 @@ html {
 
 .unit-top{
     top: -22px;
-    left: 12px
+    left: 10px
 }
 
 .unit-bottom{
     bottom: -25px;
-    right: 14px;
+    right: 10px;
 }
 
 .bg-white-carusel-dot .owl-carousel .owl-dots{
@@ -255,7 +255,7 @@ html {
 }
 
 .detail-title-badge{
-    background: #000;
+    background: #B79A70;
     color: white;
     display: flex;
     width: 100%;
@@ -296,7 +296,7 @@ html {
 }
 
 .detail-fixed-bottom{
-    background: #B29A6E;
+    background: #96794F;
     padding: 20px 10px;
     position: fixed;
     bottom: 12px;
@@ -320,7 +320,7 @@ a#readless{
 
 .about-tab-container{
     position: sticky;
-    top: 48px;
+    top: 0px;
     background: white;
     z-index: 3;
     padding-top: 40px;
@@ -434,18 +434,18 @@ a#readless{
 } */
 
 .home-img{
-    height: 100vh;
+    height: calc(100vh - 56px);
 }
 
-.home-job-post-btn{
-
+.lowercase-btn span.v-btn__content{
+    text-transform: none!important;
 }
 
 .home-content{
-    bottom: 200px;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
-    width: 260px;
+    transform: translate(-50%, -50%);
+    width: 100%;
     text-align: center;
 }
 
@@ -516,4 +516,16 @@ a#readless{
 
 .benefit-active{
     background: #B29A6E;
+}
+
+.full-logo-img{
+    width: 80%;
+}
+
+.px-40px{
+    padding: 0px 40px!important;
+}
+
+.pd-select-list-item {
+    text-shadow: none!important;
 }
